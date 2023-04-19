@@ -1,0 +1,109 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?kjfmg3');
+  src:  url('fonts/icomoon.eot?kjfmg3#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?kjfmg3') format('truetype'),
+    url('fonts/icomoon.woff?kjfmg3') format('woff'),
+    url('fonts/icomoon.svg?kjfmg3#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-mail:before {
+  content: "\e90d";
+  color: #b4d700;
+}
+.icon-dollar1:before {
+  content: "\e90e";
+  color: #b4d700;
+}
+.icon-location:before {
+  content: "\e908";
+  color: #b4d700;
+}
+.icon-phone:before {
+  content: "\e905";
+  color: #b4d700;
+}
+.icon-arrow:before {
+  content: "\e904";
+  color: #fff;
+}
+.icon-vector-4:before {
+  content: "\e903";
+  color: #b4d700;
+}
+.icon-vector-3:before {
+  content: "\e902";
+  color: #b4d700;
+}
+.icon-dollar:before {
+  content: "\e901";
+  color: #b4d700;
+}
+.icon-vector-2:before {
+  content: "\e900";
+  color: #b4d700;
+}
+.icon-arrow-right:before {
+  content: "\e906";
+}
+.icon-calendar:before {
+  content: "\e909";
+}
+.icon-checkmark:before {
+  content: "\e90a";
+}
+.icon-arrow-left:before {
+  content: "\e90c";
+}
+.icon-quotes-left:before {
+  content: "\e977";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-dribbble:before {
+  content: "\eaa7";
+}
+.icon-behance:before {
+  content: "\eaa8";
+}
+.icon-linkedin:before {
+  content: "\eaca";
+}
+.icon-star:before {
+  content: "\e90b";
+}
