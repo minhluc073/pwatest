@@ -1,5 +1,13 @@
 /* Reset
 -------------------------------------------------------------- */
+:root {
+    --primary-color: #A2A5B1;
+    --color-white: #FFFFFF;
+    --color-dark: #1D1C22;
+    --primary-bg-light: #B4D700;
+    --primary-bg-white: #F6F6F6;
+}
+
 html {
     overflow-y: scroll;
     -webkit-text-size-adjust: 100%;
@@ -237,14 +245,13 @@ input::-moz-focus-inner {
 }
 
 body {
-    font: 14px/25px "Plus Jakarta Sans", sans-serif;
+    font: 14px/25px 'Inter', sans-serif;
     font-weight: 400;
     background-color: #fff;
-    color: #202020;
 }
 
 a {
-    color: #121212;
+    color: var(--primary-color);
     text-decoration: none;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -255,7 +262,7 @@ a {
 
 a:hover,
 a:focus {
-    color: #14a077;
+    color: var(--primary-bg-light);
     text-decoration: none;
     outline: 0;
     -webkit-transition: all 0.3s ease-in-out;
@@ -281,27 +288,35 @@ strong {
 }
 
 h1 {
-    font: 50px/50px "Plus Jakarta Sans", sans-serif;
+    font: 50px/50px 'Bebas Neue', cursive;
+    color: var(--color-white);
 }
 
 h2 {
-    font: 45px/45px "Plus Jakarta Sans", sans-serif;
+    font: 45px/45px 'Bebas Neue', cursive;
 }
 
 h3 {
-    font: 30px/30px "Plus Jakarta Sans", sans-serif;
+    font: 30px/30px 'Bebas Neue', cursive;
+    color: var(--primary-color);
 }
 
 h4 {
-    font: 25px/25px "Plus Jakarta Sans", sans-serif;
+    font: 25px/25px 'Bebas Neue', cursive;
 }
 
 h5 {
-    font: 22px/22px "Plus Jakarta Sans", sans-serif;
+    font: 22px/22px 'Bebas Neue', cursive;
 }
 
 h6 {
-    font: 20px/20px "Plus Jakarta Sans", sans-serif;
+    font: 20px/20px 'Bebas Neue', cursive;
+}
+
+p {
+    color: var(--primary-color);
+    font-size: 16px;
+    line-height: 30px;
 }
 
 h1,
@@ -320,7 +335,7 @@ h4,
 h5,
 h6 {
     font-weight: 700;
-    color: #121212;
+    color: var(--primary-color);
 }
 
 h1 {
@@ -362,14 +377,14 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
     font-size: 12px;
-    font-family: "Plus Jakarta Sans", sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
-    color: #202020;
+    color: var(--color-dark);
     background-color: transparent;
     text-transform: uppercase;
     border-width: 1px;
     border-style: solid;
-    border-color: #202020;
+    border-color: var(--color-dark);
     padding: 7px 21px;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
@@ -397,7 +412,7 @@ input[type="color"] {
     width: 100%;
     font-size: 14px;
     border: 1px solid #e5e5e5;
-    color: #a0a0a0;
+    color: var(--primary-color);
     background-color: transparent;
     height: 50px;
     padding: 12px 30px;
@@ -443,17 +458,17 @@ textarea:-moz-placeholder,
 textarea::-moz-placeholder,
 input:-moz-placeholder,
 input::-moz-placeholder {
-    color: #a0a0a0;
+    color: var(--primary-color);
     opacity: 1;
 }
 
 input:-ms-input-placeholder {
-    color: #a0a0a0;
+    color: var(--primary-color);
 }
 
 textarea::-webkit-input-placeholder,
 input::-webkit-input-placeholder {
-    color: #a0a0a0;
+    color: var(--primary-color);
     opacity: 1;
 }
 
@@ -489,5 +504,10 @@ input[type="color"],
     -moz-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
-    color: #a0a0a0;
+    color: var(--primary-color);
+}
+
+/* body dark */
+.bg-dark {
+    color: var(--color-dark);
 }

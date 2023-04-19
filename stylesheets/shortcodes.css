@@ -1,0 +1,14 @@
+/*
+--------------------------
+*/
+@import url(../fonts/icons-font.css);
+
+.tf-container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 1200px;
+    max-width: 100%;
+}
