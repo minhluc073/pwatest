@@ -576,3 +576,61 @@ form .textarea label {
 .wd-post-comment form button:hover span {
     transform: translate(5px, -5px);
 }
+
+/* PORTFOLIO - DETAILS */
+.group-desc-user {
+    padding: 37px 50px 49px;
+    border-radius: 20px;
+    background-color: var(--primary-bg-white);
+    margin-bottom: 26px;
+}
+
+.group-desc-user .desc-title {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-bottom: 38px;
+}
+
+.group-desc-user .desc-title .inner-desc {
+    width: calc(50% - 10px);
+    margin-left: 10px;
+}
+
+.group-desc-user .desc-title .inner-desc li {
+    font-family: 'Bebas Neue', cursive;
+    color: var(--title-light);
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 42px;
+
+}
+
+.group-desc-user .desc-title .inner-desc li:hover,
+.group-desc-user .desc-title .inner-desc li.active {
+    color: var(--primary-bg-light);
+}
+
+.group-desc-user .desc-title .inner-desc li span {
+    color: var(--primary-color);
+}
+
+.group-desc-user .image img {
+    border-radius: 20px;
+}
+
+.portfolio-wrap .content h3 {
+    line-height: 34px;
+    margin-bottom: 15px;
+}
+
+.portfolio-wrap .tf-list {
+    margin: 42px 0px;
+}
+
+.portfolio-wrap .tf-list li {
+    color: var(--title-light);
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 700;
+}
