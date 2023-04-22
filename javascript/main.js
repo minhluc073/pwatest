@@ -184,6 +184,7 @@
       }
     }
   };
+
   /* goTop
   ------------------------------------------------------------------------------------- */
   var goTop = function () {
@@ -207,20 +208,26 @@
       var a = 0;
       $(window).scroll(function () {
         var oTop = $(".wrap-counter").offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
+        if ($(window).scrollTop() > oTop) {
           if ($().countTo) {
-            $(".wrap-counter")
-              .find(".counter-number")
-              .each(function () {
-                var to = $(this).data("to"),
-                  speed = $(this).data("speed"),
-                  formatter = $(this).data("formatter");
-                $(this).countTo({
-                  to: to,
-                  speed: speed,
-                  formatter: formatter,
-                });
-              });
+            $(".stat-number").each(function () {
+              var size = $(this).text().split(".")[1]
+                ? $(this).text().split(".")[1].length
+                : 0;
+              $(this)
+                .prop("Counter", 0)
+                .animate(
+                  {
+                    Counter: $(this).text(),
+                  },
+                  {
+                    duration: 3000,
+                    step: function (func) {
+                      $(this).text(parseFloat(func).toFixed(size));
+                    },
+                  }
+                );
+            });
           }
           a = 1;
         }
@@ -514,31 +521,6 @@
 
   new WOW().init();
 
-  /* progressProduct
-  ------------------------------------------------------------------------------------- */
-  var progressProduct = function () {
-    if ($(".progress-item").length > 0) {
-      $(".progress-item").appear(function () {
-        $(this)
-          .find("div.donat-bg")
-          .each(function () {
-            $(this)
-              .find(".custom-donat")
-              .delay(600)
-              .animate(
-                {
-                  width: $(this).attr("data-percent"),
-                },
-                1000,
-                "easeInCirc"
-              );
-            var txt = $(this).attr("data-percent");
-            $(this).closest(".rating-details").find(".percent").text(txt);
-          });
-      });
-    }
-  };
-
   $(document).ready(function () {
     var height = $(window).height() + 20;
     $(".row-height").css("height", height);
@@ -682,6 +664,7 @@
       $input.val(value);
     });
   };
+
   /* stickSidebar
   ------------------------------------------------------------------------------------- */
   var stickSidebar = function () {
