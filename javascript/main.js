@@ -98,6 +98,13 @@
       }
     }
   };
+
+  $(".choose-themes").on("click", function (e) {
+    e.preventDefault();
+    $("body").toggleClass("is-dark");
+    $(".sun").toggleClass("moon");
+    $(".choose-themes").toggleClass("day");
+  });
   /* scrollEffect
   ------------------------------------------------------------------------------------- */
   var scrollEffect = function () {
