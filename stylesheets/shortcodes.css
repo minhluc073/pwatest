@@ -1581,3 +1581,45 @@ table.content p {
 .grid-item-6 .img-3 {
     width: 170px;
 }
+
+/* dark themes
+----------------------------------------------------------- */
+.is-dark .sticky-sidebar {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.is-dark .wrap-title .note {
+    border: 1px solid var(--color-dark);
+}
+
+.is-dark .grid-item-2 .box-title .tag a {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.is-dark .wd-social-icon li a {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.is-dark .wd-social-icon li a:hover,
+.is-dark .wd-social-icon li a.active {
+    color: var(--primary-bg-light);
+}
+
+.is-dark .btn-profile,
+.is-dark .btn-profile span::before {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--color-white);
+}
+
+
+.is-dark .btn-profile:hover,
+.is-dark .btn-profile.active {
+    background: var(--primary-bg-light);
+    color: var(--title-light);
+}
+
+.is-dark .btn-profile.active span::before,
+.is-dark .btn-profile:hover span::before {
+    color: var(--title-light);
+
+}
