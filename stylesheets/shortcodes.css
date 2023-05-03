@@ -25,6 +25,8 @@
 .group-4-8 {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+
 }
 
 .group-4-8 .cl4 {
@@ -40,6 +42,7 @@
 --------------------------------------------------------------*/
 /* sidebar */
 .sticky-sidebar {
+    position: sticky;
     background-color: #f6f6f6;
     border-radius: 20px;
     padding: 50px 0px;
@@ -563,7 +566,7 @@ form .textarea label {
 
 .btn-profile:hover span,
 .wd-post-comment form button:hover span {
-    transform: translate(5px, -5px);
+    transform: translate(3px, -3px);
 }
 
 /* PORTFOLIO - DETAILS */
@@ -1622,4 +1625,64 @@ table.content p {
 .is-dark .btn-profile:hover span::before {
     color: var(--title-light);
 
+}
+
+.wedo-section::-webkit-scrollbar {
+    width: 5px
+}
+
+.wedo-section {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-bg-light) #fff
+}
+
+.wedo-section:-webkit-scrollbar-track {
+    background: #fff
+}
+
+.wedo-section::-webkit-scrollbar-thumb {
+    background-color: var(--primary-bg-light);
+    border-radius: 6px;
+    /* border: 3px solid #fff */
+}
+
+.wedo-section {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 22rem;
+    right: 0;
+    padding-right: 25px;
+    margin-right: -25px;
+    overflow: hidden;
+    overflow-y: scroll;
+    opacity: 0;
+    display: none;
+    z-index: 8;
+    transition: visibility 1s linear, opacity 0s linear;
+    -moz-transition: visibility 1s linear, opacity 0s linear;
+    -webkit-transition: visibility1s linear, opacity 0s linear;
+    -o-transition: visibility 1s linear, opacity 0s linear
+}
+
+.wedo-section.animated {
+    opacity: 1;
+    display: block;
+    z-index: 9
+}
+
+.wedo-section.active {
+    opacity: 1;
+    display: block;
+    z-index: 10
+}
+
+.menu-content li.active a {
+    color: red;
+}
+
+.wedo-section.hidden {
+    opacity: 0;
+    display: none;
+    z-index: 9
 }
