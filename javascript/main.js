@@ -118,19 +118,23 @@
     const body = $("body");
     const modalNav = $(".menu-popup");
     if (modalNav.length) {
-      const open = function () {
-        modalNav.addClass("modal-menu--open");
-      };
+      // const open = function () {
+      //   modalNav.addClass("modal-menu--open");
+      // };
       const close = function () {
         modalNav.removeClass("modal-menu--open");
       };
 
       $("#nav-filter").on("click", function () {
-        open();
+        modalNav.toggleClass("modal-menu--open");
+        // open();
       });
-      $(".modal-menu__backdrop, .menu-content li a").on("click", function () {
-        close();
-      });
+      $(".modal-menu__backdrop,.title-button-group, .menu-content li a").on(
+        "click",
+        function () {
+          close();
+        }
+      );
     }
   };
 

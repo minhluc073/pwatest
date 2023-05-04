@@ -64,13 +64,30 @@
     height: 16px;
     border-radius: 50px;
     background-color: var(--primary-bg-light);
-    bottom: 6%;
-    right: 14%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: hidden;
+    animation: circle 4s linear infinite;
 }
 
 .sticky-sidebar .avatar img {
     border-radius: 100px;
 }
+
+@keyframes circle {
+    0% {
+        transform: rotate(0deg) translate(-85px) rotate(0deg);
+
+    }
+
+    100% {
+        transform: rotate(360deg) translate(-85px) rotate(-360deg);
+    }
+}
+
 
 .sticky-sidebar .profile {
     margin: 25px 0px 0px;
@@ -1373,7 +1390,9 @@ table.content p {
 }
 
 .tf-box-resume.active,
-.tf-box-resume:hover {
+.tf-box-resume:hover,
+.is-dark .tf-box-resume.active,
+.is-dark .tf-box-resume:hover {
     border: 1px solid var(--primary-bg-light);
 }
 
@@ -1400,7 +1419,7 @@ table.content p {
     margin-bottom: 90px;
 }
 
-.banner {
+.banner-light {
     background-image: url(../images/service/bg.jpg);
     padding: 30px 45px 22px;
     background-size: cover;
@@ -1410,19 +1429,36 @@ table.content p {
     border-radius: 8px;
 }
 
-.banner .item {
+.banner-dark {
+    background-image: url(../images/service/bg-dark.jpg);
+    padding: 30px 45px 22px;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#about .banner-dark {
+    display: none;
+}
+
+
+.banner-light .item,
+.banner-dark .item {
     display: flex;
     flex-direction: column;
     row-gap: 24px;
     align-items: center;
 }
 
-.banner .item img {
+.banner-light .item img,
+.banner-dark .item img {
     width: 50px;
     height: 50px;
 }
 
-.banner .item h4 {
+.banner-light .item h4,
+.banner-dark .item h4 {
     font-size: 24px;
     line-height: 30px;
 }
@@ -1692,7 +1728,19 @@ table.content p {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.is-dark .tf-box-resume .inner-right a {
+    color: var(--primary-color);
+}
+
 .is-dark table.content td {
     border-left: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.is-dark .banner-light {
+    display: none;
+}
+
+.is-dark #about .banner-dark {
+    display: flex;
 }
