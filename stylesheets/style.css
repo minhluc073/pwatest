@@ -325,6 +325,7 @@ p {
     color: var(--primary-color);
     font-size: 16px;
     line-height: 30px;
+    margin: 0;
 }
 
 h1,
@@ -901,12 +902,11 @@ input[type="color"],
     color: var(--title-light);
 }
 
-.menu-popup .menu-content {
-    border-bottom: 1px solid var(--title-light);
-}
-
-.menu-popup .menu-content li {
-    padding-bottom: 20px;
+.menu-popup .menu-content li a {
+    font: 30px/30px 'Bebas Neue', cursive;
+    font-size: 32px;
+    line-height: 68px;
+    color: var(--title-light);
 }
 
 .menu-popup .menu-content li a:hover {
@@ -923,12 +923,14 @@ input[type="color"],
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .menu-popup .menu-right .icon-close span {
-    font-family: 'Bebas Neue', cursive;
     font-size: 14px;
     line-height: 17px;
+    font-weight: 600;
+    color: var(--title-light);
 }
 
 .title-button-group {
