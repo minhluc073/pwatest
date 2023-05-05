@@ -694,7 +694,7 @@ input[type="color"],
     position: absolute;
     inset: 85px 13px 0px;
     background-color: rgba(26, 25, 30, 0.9);
-    min-height: 1160px;
+    /* min-height: 1160px; */
     z-index: 999;
     border-radius: 20px;
     opacity: 0;
@@ -927,9 +927,10 @@ input[type="color"],
 }
 
 .menu-popup .menu-right .icon-close span {
+    font-family: 'Bebas Neue', cursive;
+    letter-spacing: 0.6em;
     font-size: 14px;
     line-height: 17px;
-    font-weight: 600;
     color: var(--title-light);
 }
 

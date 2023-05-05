@@ -70,7 +70,7 @@
     bottom: 0;
     margin: auto;
     overflow: hidden;
-    animation: circle 4s linear infinite;
+    animation: circle 6s linear infinite;
 }
 
 .sticky-sidebar .avatar img {
@@ -1488,20 +1488,20 @@ table.content p {
     grid-column: 2 / 5;
 }
 
-.grid-item-2 .box-title {
+.home-box .box-title {
     margin-bottom: 60px;
 }
 
-.grid-item-2 .box-title .title {
+.home-box .box-title .title {
     flex: 2;
 }
 
-.grid-item-2 .box-title .tag {
+.home-box .box-title .tag {
     flex: 1;
     text-align: end;
 }
 
-.grid-item-2 .box-title .tag a {
+.home-box .box-title .tag a {
     background: #f6f6f6;
     border-radius: 50px;
     transform: rotate(90deg);
@@ -1513,7 +1513,7 @@ table.content p {
     color: var(--primary-color);
 }
 
-.grid-item-2 .box-title .tag a i {
+.home-box .box-title .tag a i {
     margin-right: 5px;
 }
 
@@ -1691,7 +1691,7 @@ table.content p {
     border: 1px solid var(--color-dark);
 }
 
-.is-dark .grid-item-2 .box-title .tag a {
+.is-dark .home-box .box-title .tag a {
     background: rgba(255, 255, 255, 0.1);
 }
 
@@ -1744,3 +1744,57 @@ table.content p {
 .is-dark #about .banner-dark {
     display: flex;
 }
+
+/* home page */
+.img-box-sidebar {
+    margin: 30px 0px 25px;
+}
+
+.img-box-sidebar .img-inner-top {
+    display: inline-block;
+    position: relative;
+}
+
+.img-box-sidebar .img-inner-top h4 {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    font-size: 24px;
+    color: var(--color-white);
+}
+
+.img-box-sidebar .img-inner-bottom {
+    display: inline-flex;
+    gap: 20px;
+    background: url(../images/home/img-12.png);
+    padding: 25px 40px 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-items: center;
+    border-radius: 20px;
+    width: 100%;
+}
+
+.img-box-sidebar .img-inner-bottom h3 {
+    letter-spacing: 0.4em;
+    text-transform: capitalize;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--color-white);
+}
+
+.img-box-sidebar .img-inner-bottom img {
+    width: 50px;
+    height: 50px;
+}
+
+.home-box .img-top .box-image {
+    display: flex;
+    gap: 30px;
+}
+
+.home-box .img-top .box-image a {
+    display: inline-block;
+}
+
+.home-box .img-top .box-image .img-1 {}

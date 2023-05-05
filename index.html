@@ -38,6 +38,13 @@
 
 <body>
 
+  <!-- Preloader-->
+  <div class="preloader">
+    <div class="preloader-block">
+      <div class="preloader-icon"><span class="loading-dot loading-dot-1"></span><span class="loading-dot loading-dot-2"></span><span class="loading-dot loading-dot-3"></span></div>
+    </div>
+  </div>
+  <div id="overlay-effect"></div>
 
   <!-- Header -->
   <header id="header" class="header header-default">
@@ -89,8 +96,8 @@
             </div>
             <ul class="menu-content">
               <li><a class="scroll-to active" href="./index.html">HOME</a></li>
-              <li><a href="./about-us.html">ONE PAGE</a></li>
-              <li><a href="#">SERVICE</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#service">SERVICE</a></li>
               <li><a href="#">PRICE TABLE</a></li>
               <li><a href="#">SKILLS</a></li>
               <li><a href="#">PORTFOLIO</a></li>
@@ -130,7 +137,7 @@
   <section>
     <div class="tf-container">
       <div class="wrapper wrap-home">
-        <div class="grid-container">
+        <!-- <div class="grid-container">
           <div class="grid-item-1">
             <div class="sticky-sidebar">
               <div class="avatar">
@@ -176,24 +183,7 @@
               </div>
             </div>
           </div>
-          <div class="grid-item-3">
-            <div class="top">
-              <a href="#"><img class="img-1" src="images/home/img-1.png" alt="image"></a>
-              <a href="#"><img class="img-2" src="images/home/img-2.png" alt="image"></a>
-            </div>
-            <div class="bottom">
-              <div class="inner-left">
-                <a href="#"><img class="img-1" src="images/home/img-3.png" alt="image"></a>
-              </div>
-              <div class="inner-right">
-                <a href="#"><img class="img-1" src="images/home/img-5.png" alt="image"></a>
-                <a href="#"><img class="img-2" src="images/home/img-4.png" alt="image"></a>
-                <a href="#"><img class="img-2" src="images/home/img-6.png" alt="image"></a>
-
-
-              </div>
-            </div>
-          </div>
+      
           <div class="grid-item-4">
             <a href="#"><img class="img-1" src="images/home/img-7.png" alt="image"></a>
             <a href="#"><img class="img-2" src="images/home/img-8.png" alt="image"></a>
@@ -208,7 +198,241 @@
             <a href="#"><img class="img-2" src="images/home/img-11.png" alt="image"></a>
             <a href="#"><img class="img-3" src="images/home/img-10.png" alt="image"></a>
           </div>
+        </div> -->
+        <div class="group-4-8">
+          <div class="cl4">
+            <div class="sticky-sidebar">
+              <div class="avatar">
+                <img src="images/avatar/avt-1.png" alt="image">
+              </div>
+              <div class="profile">
+                <div class="top">
+                  <h3><a href="#">Hy! I’m Tanmay Tanvir</a></h3>
+                  <p>UX/UI Designer</p>
+                </div>
+                <div class="content">
+                  <p class="mail"><a href="#">help.info@gmail.com</a></p>
+                  <p>themeforest Wedo portfolio</p>
+                  <ul class="wd-social-icon m-top">
+                    <li><a href="#"><i class="icon-facebook1"></i></a></li>
+                    <li><a href="#" class="active"><i class="icon-twitter"></i></a></li>
+                    <li><a href="#"><i class="icon-instagram"></i></a></li>
+                    <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                  </ul>
+                </div>
+                <div class="bottom">
+                  <a class="btn-profile active" href="#">Hire Me!<span class="icon-arrow"></span></a>
+                  <a class="btn-profile" href="#">Download CV <span class="icon-arrow"></span></a>
+                </div>
+              </div>
+            </div>
+            <ul class="menu-content img-box-sidebar">
+              <li><a href="#service" class="img-inner-top"><img src="images/home/img-13.png" alt="image"> <h4>Service</h4></a></li>
+              <li><a href="#contact" class="img-inner-bottom"><img src="images/home/icon-phone.png" alt="image"> <h3>Contact Us</h3> </a></li> 
+            </ul>
+          </div>
+            <!-- home -->
+          <div class="cl8">
+            <div class="home-box wedo-section animated" id="home">
+              <div class="wrap-title">
+                <div class="note">
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>There I’m</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    We Have Design Experience UX/UI.
+                  </h1>
+                  <div class="tag">
+                    <a href="#"><i class="icon-user icon"></i>Let’s Chat</a>
+  
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <div class="inner-left">
+                  <div class="img-top">
+                    <ul class="menu-content box-image">
+                      <li>
+                        <a href="#"><img class="img-1" src="images/home/img-1.png" alt="image"></a>
+                      </li>
+                      <li>
+                        <a href="#about"><img class="img-2" src="images/home/img-2.png" alt="image"></a>
+                      </li> 
+                    </ul>
+                  </div>
+                  <div class="img-content"></div>
+                  <div class="img-bottom"></div>
+                </div>
+                <div class="inner-right">
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+          <!-- about us -->
+          <div class="cl8">
+              <div class="wedo-section" id="about">
+                <div class="about-wrap">
+                <div class="wrap-title">
+                  <div class="note">
+                    <span class="icon-user icon"></span>
+                    <span>Hi!</span>
+                    &ensp;
+                    <p>About Me</p>
+                  </div>
+                  <div class="box-title">
+                    <h1 class="title">
+                      About Me<span>!</span>
+                    </h1>
+                    <img class="logo" src="images/logo-2.png" alt="image">
+                  </div>
+  
+                  <p>
+                    Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae enim viverra
+                    mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis. Nullam tincidunt finibus
+                    pretium. auctor vitae nulla a tristique. Vestibulum viverra ipsum.
+                  </p>
+                  <p>Integer non sapien justo. Fusce feugiat viverra tellus, eu interdum enim varius nec. Etiam laoreet
+                    augue mauris, sit amet convallis nibh congue id. Fusce justo leo, imperdiet a massa id, lacinia mollis
+                    diam. Vestibulum commodo euismod mauris. Suspendisse accumsan volutpat nibh at dictum. Cras
+                    condimentum leo justo, ut venenatis mauris tempor.</p>
+                </div>
+                <table class="content">
+  
+                  <tr>
+                    <td class="br-left">
+                      <h4>Name</h4>
+                      <p>Donald L. Juarez</p>
+                    </td>
+                    <td>
+                      <h4>Phone</h4>
+                      <p>+99 (555) 666 88 55</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="br-left br-bottom">
+                      <h4>Office</h4>
+                      <p>247/Plot No. 39, New York.</p>
+                    </td>
+                    <td class="br-bottom">
+                      <h4>Experience</h4>
+                      <p>12 Years</p>
+                    </td>
+                  </tr>
+                </table>
+                </div>
+           
+                <div class="resume-wrap">
+                <div class="wrap-title">
+                  <div class="note">
+                    <span class="icon-user icon"></span>
+                    <span>Hi!</span>
+                    &ensp;
+                    <p>Our RESUME</p>
+                  </div>
+                  <div class="box-title">
+                    <h1 class="title">
+                      Resume Me<span>!</span>
+                    </h1>
+  
+                  </div>
+  
+                  <p>
+                    Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae enim viverra
+                    mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis. Nullam tincidunt finibus
+                    pretium. auctor vitae nulla a tristique. Vestibulum viverra ipsum.
+                  </p>
+  
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume">
+                      <ul class="inner-left">
+                        <li>University of Pennsylvania</li>
+                        <li>2016</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Bachelor Degree Of Design</a></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume active">
+                      <ul class="inner-left">
+                        <li>Princeton University</li>
+                        <li>2018</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Certificate of web Development training</a></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume">
+                      <ul class="inner-left">
+                        <li>Defodil University</li>
+                        <li>2020</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Certificate of UX/UI training</a></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume">
+                      <ul class="inner-left">
+                        <li>Startart University</li>
+                        <li><span>(Running)</span> 2023</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Certificate of Java training</a></h4>
+                    </div>
+                  </div>
+                </div>
+  
+                </div>
+            
+                <div class="banner-light">
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-9.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="95"></a><span>% Figma</span></h4>
+                  </div>
+                    <div class="item wrap-counter">
+                    <img src="images/service/img-8.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="65"></a><span>% Bootstrap</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-2.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="85"></a><span>% Sketch</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-7.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="90"></a><span>% XD</span></h4>
+                  </div>
+                </div>
+                <div class="banner banner-dark">
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-9.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="95"></a><span>% Figma</span></h4>
+                  </div>
+                    <div class="item wrap-counter">
+                    <img src="images/service/img-8.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="65"></a><span>% Bootstrap</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-2.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="85"></a><span>% Sketch</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-7.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="90"></a><span>% XD</span></h4>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- end -->
         </div>
+
+
+
+
+
       </div>
 
     </div>
@@ -223,7 +447,6 @@
         <img class="logo-footer-dark" src="images/footer.png" alt="images">
       </div>
     </div>
-
   </footer>
   <!-- End footer -->
   <script src="javascript/jquery.min.js"></script>
