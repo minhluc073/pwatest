@@ -36,17 +36,19 @@
 
 </head>
 
-<body>
-  <!-- Header -->
-  <header id="header" class="header header-default">
+<body class="tf-fullscreen">
+   <!-- Header -->
+   <header id="header" class="header header-default">
     <div class="tf-container">
-      <div class="row">
-        <div class="col-lg-4 col-sm-6 col-3">
+      <div class="row is-relative">
+        <div class="col-lg-4">
           <a href="index.html" class="logo">
-            <img src="images/logo.png" alt="images">
+            <img id="logo_header" src="images/logo.png" alt="image">
+            <img id="logo_header-2" src="images/logo-dark.png" alt="images">
+
           </a>
         </div>
-        <div class="col-lg-8 col-sm-6 col-9">
+        <div class="col-lg-8">
           <div class="inner-header">
             <div class="inner-header-left">
               <h3><a href="index.html">HOME</a></h3>
@@ -56,7 +58,7 @@
               <div class="wd-icon-box">
                 <span class="icon-phone"></span>
               </div>
-              <div class="wd-icon-box active">
+              <div id="nav-filter" class="wd-icon-box active">
                 <div class="nav-menu">
                   <span></span>
                 </div>
@@ -64,12 +66,65 @@
             </div>
           </div>
         </div>
+        <!-- popup -->
+        <div class="menu-popup">
+          <div class="modal-menu__backdrop"></div>
+          <div class="widget-filter">
+
+            <div class="menu-left">
+              <a href="index.html"><img src="images/logo-menu.png" alt="img"></a>
+              <div class="contact">
+                <div class="contact-phone">
+                  <p>Contact Phone</p>
+                  <h4>+55 (9900) 666 22</h4>
+                </div>
+                <div class="contact-mail">
+                  <p>Contact Mail</p>
+                  <h4>info.gvd @gmail.com</h4>
+                </div>
+              </div>
+
+            </div>
+            <ul class="menu-content">
+              <li><a class="scroll-to active" href="./index.html">HOME</a></li>
+              <li><a href="#about">ABOUT</a></li>
+              <li><a href="#service">SERVICE</a></li>
+              <li><a href="#price">PRICE TABLE</a></li>
+              <li><a href="#skill">SKILLS</a></li>
+              <li><a href="#portfolio">PORTFOLIO</a></li>
+              <li><a href="#testimonial">TESTIMONIAL</a></li>
+              <li><a href="#contact">CONTACT</a></li>
+            </ul>
+
+            <div class="menu-right">
+              <div class="icon-close">
+                <span>C L O S E</span> 
+                <a class="title-button-group"></a>
+              </div>
+              
+              <ul class="wd-social-icon">
+                <li><a href="#"><i class="icon-facebook1"></i></a></li>
+                <li><a href="#" class="active"><i class="icon-twitter"></i></a></li>
+                <li><a href="#"><i class="icon-instagram"></i></a></li>
+                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
       </div>
+
     </div>
-    </div>
+
   </header>
   <!-- End header -->
-  <!-- Blog details -->
+  <div class="is-fixed">
+    <div class="choose-themes">
+      <div class="sun">
+      </div>
+    </div>
+  </div>
+
   <section>
     <div class="tf-container">
       <div class="wrapper">
@@ -101,8 +156,1291 @@
               </div>
             </div>
           </div>
+          <!-- home -->
           <div class="cl8">
-            <div class="blog-wrap">
+            <div class="home-box wedo-section" id="home">
+              <div class="wrap-title">
+                <div class="note">
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>There I’m</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    We Have Design Experience UX/UI.
+                  </h1>
+                  <div class="tag">
+                    <a href="#"><i class="icon-user icon"></i>Let’s Chat</a>
+  
+                  </div>
+                </div>
+              </div>
+              <div class="content">
+                <div class="inner-left">
+                  <div class="img-top">
+                    <ul class="menu-content box-image">
+                      <li>
+                        <a href="#"><img class="img-1" src="images/home/img-1.png" alt="image"></a>
+                      </li>
+                      <li>
+                        <a href="#about" class="img-about"><img src="images/home/img-2.png" alt="image"> <h4>About Us</h4></a>
+                      </li> 
+                    </ul>
+                  </div>
+                  <div class="img-content">
+                    <ul class="menu-content box-image">
+                      <li>
+                        <a href="#portfolio" class="img-portfolio"><img src="images/home/img-3.png" alt="image"><h4><p>OUR</p><p>Portfolio</p></h4></a>
+                      </li>
+                      <li>
+                        <ul class="icon-social">
+                          <li><a href="#" class="img-1" ><img src="images/home/img-5.png" alt="image"> </a> </li>
+                          <li><a href="#" ><img src="images/home/img-4.png" alt="image"> </a> </li>
+                          <li><a href="#" ><img src="images/home/img-6.png" alt="image"> </a> </li>
+                        </ul>
+                      </li> 
+                    </ul>
+                  </div>
+                  <div class="img-bottom">
+                    <a href="#"><img src="images/home/img-11.png" alt="image"></a>
+                    <a href="#"><h4>What Client </h4><p>Says?</p></a>
+                  </div>
+                </div>
+                <div class="inner-right">
+                  <ul class="menu-content box-image">
+                    <li class="top"><a href="#"><img src="images/home/img-7.png" alt="image"></a></li>
+                    <li class="inner"><a href="#skill"><img src="images/home/img-8.png" alt="image"><h4><p>OUR</p><p>BEST SKILL</p></h4></a></li>
+                    <li class="bottom"><a href="#blog"><img src="images/home/img-9.png" alt="image"><h4>news BLOG</h4></a></li>
+                  </ul>   
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+          <!-- about us -->
+          <div class="cl8">
+              <div class="wedo-section" id="about">
+                <div class="about-wrap">
+                <div class="wrap-title">
+                  <div class="note">
+                    <span class="icon-user icon"></span>
+                    <span>Hi!</span>
+                    &ensp;
+                    <p>About Me</p>
+                  </div>
+                  <div class="box-title">
+                    <h1 class="title">
+                      About Me<span>!</span>
+                    </h1>
+                    <img class="logo" src="images/logo-2.png" alt="image">
+                  </div>
+  
+                  <p>
+                    Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae enim viverra
+                    mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis. Nullam tincidunt finibus
+                    pretium. auctor vitae nulla a tristique. Vestibulum viverra ipsum.
+                  </p>
+                  <p>Integer non sapien justo. Fusce feugiat viverra tellus, eu interdum enim varius nec. Etiam laoreet
+                    augue mauris, sit amet convallis nibh congue id. Fusce justo leo, imperdiet a massa id, lacinia mollis
+                    diam. Vestibulum commodo euismod mauris. Suspendisse accumsan volutpat nibh at dictum. Cras
+                    condimentum leo justo, ut venenatis mauris tempor.</p>
+                </div>
+                <table class="content">
+  
+                  <tr>
+                    <td class="br-left">
+                      <h4>Name</h4>
+                      <p>Donald L. Juarez</p>
+                    </td>
+                    <td>
+                      <h4>Phone</h4>
+                      <p>+99 (555) 666 88 55</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="br-left br-bottom">
+                      <h4>Office</h4>
+                      <p>247/Plot No. 39, New York.</p>
+                    </td>
+                    <td class="br-bottom">
+                      <h4>Experience</h4>
+                      <p>12 Years</p>
+                    </td>
+                  </tr>
+                </table>
+                </div>
+           
+                <div class="resume-wrap">
+                <div class="wrap-title">
+                  <div class="note">
+                    <span class="icon-user icon"></span>
+                    <span>Hi!</span>
+                    &ensp;
+                    <p>Our RESUME</p>
+                  </div>
+                  <div class="box-title">
+                    <h1 class="title">
+                      Resume Me<span>!</span>
+                    </h1>
+  
+                  </div>
+  
+                  <p>
+                    Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae enim viverra
+                    mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis. Nullam tincidunt finibus
+                    pretium. auctor vitae nulla a tristique. Vestibulum viverra ipsum.
+                  </p>
+  
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume">
+                      <ul class="inner-left">
+                        <li>University of Pennsylvania</li>
+                        <li>2016</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Bachelor Degree Of Design</a></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume active">
+                      <ul class="inner-left">
+                        <li>Princeton University</li>
+                        <li>2018</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Certificate of web Development training</a></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume">
+                      <ul class="inner-left">
+                        <li>Defodil University</li>
+                        <li>2020</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Certificate of UX/UI training</a></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="tf-box-resume">
+                      <ul class="inner-left">
+                        <li>Startart University</li>
+                        <li><span>(Running)</span> 2023</li>
+                      </ul>
+                      <h4 class="inner-right"><a href="#"> Certificate of Java training</a></h4>
+                    </div>
+                  </div>
+                </div>
+  
+                </div>
+            
+                <div class="banner-light">
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-9.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="95"></a><span>% Figma</span></h4>
+                  </div>
+                    <div class="item wrap-counter">
+                    <img src="images/service/img-8.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="65"></a><span>% Bootstrap</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-2.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="85"></a><span>% Sketch</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-7.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="90"></a><span>% XD</span></h4>
+                  </div>
+                </div>
+                <div class="banner banner-dark">
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-9.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="95"></a><span>% Figma</span></h4>
+                  </div>
+                    <div class="item wrap-counter">
+                    <img src="images/service/img-8.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="65"></a><span>% Bootstrap</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-2.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="85"></a><span>% Sketch</span></h4>
+                  </div>
+                  <div class="item wrap-counter">
+                    <img src="images/service/img-7.png" alt="image">
+                    <h4><a href="#" class="counter-number" data-speed="5000" data-to="90"></a><span>% XD</span></h4>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- end -->
+          <!-- service -->
+          <div class="cl8">
+            <div class="service-wrap wedo-section" id="service">
+              <div class="wrap-title">
+                <div class="note">
+                  <span class="icon-settings icon"></span>
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>Service Hare</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    Best Of Service<span>.</span>
+                  </h1>
+                  <img class="logo" src="images/logo-2.png" alt="image">
+                </div>
+
+                <p>
+                  Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae enim viverra
+                  mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis.Integer non sapien justo. Fusce
+                  feugiat viverra tellus, eu interdum enim varius nec. Etiam laoreet augue mauris, sit amet convallis
+                  nibh
+                </p>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="tf-service">
+                    <div class="title">
+                      <p>Themeforest Project</p>
+                      <span>(35 - Project)</span>
+                    </div>
+                    <div class="content">
+                      <h4><a href="#">Figma Files and Templates</a></h4>
+                      <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi.</p>
+                    </div>
+                    <div class="image">
+                      <img src="images/service/img-1.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <!-- box 2 -->
+                <div class="col-lg-12">
+                  <div class="tf-service">
+                    <div class="title">
+                      <p>graphicriver Project</p>
+                      <span>(35 - Project)</span>
+                    </div>
+                    <div class="content">
+                      <h4><a href="#">Sketch Files and Templates</a></h4>
+                      <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi.</p>
+                    </div>
+                    <div class="image">
+                      <img src="images/service/img-2.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 3 -->
+                <div class="col-lg-12">
+                  <div class="tf-service">
+                    <div class="title">
+                      <p>photodune Project</p>
+                      <span>(35 - Project)</span>
+                    </div>
+                    <div class="content">
+                      <h4><a href="#">XD Files and Templates</a></h4>
+                      <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi.</p>
+                    </div>
+                    <div class="image">
+                      <img src="images/service/img-3.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 4 -->
+                <div class="col-lg-12">
+                  <div class="tf-service">
+                    <div class="title">
+                      <p>3docean Project</p>
+                      <span>(35 - Project)</span>
+                    </div>
+                    <div class="content">
+                      <h4><a href="#">Bootstrap Files and Templates</a></h4>
+                      <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi.</p>
+                    </div>
+                    <div class="image">
+                      <img src="images/service/img-4.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 5 -->
+                <div class="col-lg-12">
+                  <div class="tf-service">
+                    <div class="title">
+                      <p>codecanyon Project</p>
+                      <span>(35 - Project)</span>
+                    </div>
+                    <div class="content">
+                      <h4><a href="#">PSD Files and Templates</a></h4>
+                      <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi.</p>
+                    </div>
+                    <div class="image">
+                      <img src="images/service/img-5.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 6 -->
+                <div class="col-lg-12">
+                  <div class="tf-service last">
+                    <div class="title">
+                      <p>Web Themes & Templates</p>
+                      <span>(35 - Project)</span>
+                    </div>
+                    <div class="content">
+                      <h4><a href="#">HTML Files and Templates </a></h4>
+                      <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi.</p>
+                    </div>
+                    <div class="image">
+                      <img src="images/service/img-6.png" alt="image">
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <div class="col-lg-12">
+                  <a class="btn-profile btn-service" href="#">Load More <span class="icon-arrow"></span></a>
+
+                </div>
+
+                <!-- count -->
+                <div class="col-lg-4">
+                  <div class="tf-count">
+                    <div class="count">
+                      <h4 class="wrap-counter"><span class="number">31.2</span>K</h4>    
+                    </div>
+                    <ul class="count-desc">
+                      <li>Product Sale Per Day</li>
+                      <li>Using Out Tools.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="tf-count">
+                    <div class="count">
+                      <h4 class="wrap-counter"><span class="number">2.3</span>M</h4>    
+                    </div>
+                    <ul class="count-desc">
+                      <li>Downloaded Total In</li>
+                      <li>2018-2022.</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="tf-count">
+                    <div class="count">
+                      <h4 class="wrap-counter"><span class="number">50</span>M</h4>    
+                    </div>
+                    <ul class="count-desc">
+                      <li>Trusted By Customers</li>
+                      <li>Worldwide Over.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+          <!-- price-table -->
+          <div class="cl8">
+            <div class="pricing-wrap wedo-section" id="pricing">
+              <div class="wrap-title">
+                <div class="note">
+                  <span class="icon-vector-4 icon"></span>
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>Price Table</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    Price Table<span>.</span>
+                  </h1>
+                  <img class="logo" src="images/logo-2.png" alt="image">
+                </div>
+                
+                <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae
+                   enim viverra mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis.</p>
+              </div>
+              <div class="group-col-2 content">
+                <div class="cl2">
+                  <div class="box-pricing">
+                    <div class="archive-top">
+                      <div class="inner-left">
+                        <p>0.99<span>m</span></p>
+                        <h4><a href="#"> Regular Plan</a></h4>
+                        <div class="icon">
+                          <span class="icon-vector-3 icon"></span>
+                        </div>
+                      </div>
+                      <ul class="inner-right list-desc">
+                        <li>1K Followers</li>
+                        <li>20M Ops/Month</li>
+                        <li>Email Support </li>
+                        <li class="bland">30 Days Analytics</li>
+                        <li class="bland">Free Email</li>
+                        <li class="bland">Free Domain</li>
+                        <li class="bland">Free Bandwidth</li>
+                      </ul>
+                    </div>
+                    <div class="archive-bottom">
+                        <p>Start 1 Month free Trial<span class="icon-arrow"></span></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- box 2 -->
+                <div class="cl2">
+                  <div class="box-pricing active">
+                    <div class="archive-top">
+                      <div class="inner-left">
+                        <p>0.99<span>m</span></p>
+                        <h4><a href="#">Sliver Plan</a></h4>
+                        <div class="icon">
+                          <span class="icon-dollar icon"></span>
+                        </div>
+                      </div>
+                      <ul class="inner-right list-desc">
+                        <li>1K Followers</li>
+                        <li>20M Ops/Month</li>
+                        <li>Email Support </li>
+                        <li class="bland">30 Days Analytics</li>
+                        <li class="bland">Free Email</li>
+                        <li class="bland">Free Domain</li>
+                        <li class="bland">Free Bandwidth</li>
+                      </ul>
+                    </div>
+                    <div class="archive-bottom">
+                        <p>Start 1 Month free Trial<span class="icon-arrow"></span></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 3 -->
+                <div class="cl2">
+                  <div class="box-pricing cart">
+                    <div class="archive-top">
+                      <div class="inner-left">
+                        <p>0.99<span>m</span></p>
+                        <h4><a href="#">Gold Plan</a></h4>
+                        <div class="icon">
+                          <span class="icon-vector-4 icon"></span>
+                        </div>
+                      </div>
+                      <ul class="inner-right list-desc">
+                        <li>1K Followers</li>
+                        <li>20M Ops/Month</li>
+                        <li>Email Support </li>
+                        <li class="bland">30 Days Analytics</li>
+                        <li class="bland">Free Email</li>
+                        <li class="bland">Free Domain</li>
+                        <li class="bland">Free Bandwidth</li>
+                      </ul>
+                    </div>
+                    <div class="archive-bottom">
+                        <p>Start 1 Month free Trial<span class="icon-arrow"></span></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 4 -->
+                <div class="cl2">
+                  <div class="box-pricing">
+                    <div class="archive-top">
+                      <div class="inner-left">
+                        <p>0.99<span>m</span></p>
+                        <h4><a href="#">Multi Plan</a></h4>
+                        <div class="icon">
+                          <span class="icon-vector-2 icon"></span>
+                        </div>
+                      </div>
+                      <ul class="inner-right list-desc">
+                        <li>1K Followers</li>
+                        <li>20M Ops/Month</li>
+                        <li>Email Support </li>
+                        <li class="bland">30 Days Analytics</li>
+                        <li class="bland">Free Email</li>
+                        <li class="bland">Free Domain</li>
+                        <li class="bland">Free Bandwidth</li>
+                      </ul>
+                    </div>
+                    <div class="archive-bottom">
+                        <p>Start 1 Month free Trial<span class="icon-arrow"></span></p>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+          <!-- skill -->
+          <div class="cl8">
+            <div class="skill-wrap wedo-section" id="skill">
+              <div class="wrap-title">
+                <div class="note">
+                  <span class="icon-icon-6 icon"></span>
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>Our Skill</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    The skills I have so far and the market for my skills<span>.</span>
+                  </h1>
+                  <img class="logo" src="images/logo-2.png" alt="image">
+                </div>
+
+                <p>
+                  Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae enim viverra
+                  mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis.Integer non sapien justo. Fusce
+                  feugiat viverra tellus, eu interdum enim varius nec. Etiam laoreet augue mauris, sit amet convallis
+                  nibh
+                </p>
+              </div>
+              
+                <div class="tf-skill-bar">
+                    <div class="progress-item">
+                        <h4>design</h4>
+                        <div class="inner-skill">
+                            <div class="rank-skill skill-1">90%</div>
+                            <div class="progress-value item1"></div>
+                        </div>
+                    </div>
+                        
+                    <div class="progress-item">
+                        <h4>art direction</h4>
+                        <div class="inner-skill">
+                            <div class="rank-skill skill-2">95%</div>
+                            <div class="progress-value item2"></div>
+                        </div>
+                    </div>
+                        
+                    <div class="progress-item">
+                        <h4>branding</h4>
+                        <div class="inner-skill">
+                            <div class="rank-skill skill-3">93%</div>
+                            <div class="progress-value item3"></div>
+                        </div>    
+                    </div>  
+                        
+                    <div class="progress-item">
+                        <h4>website design</h4>
+                        <div class="inner-skill">
+                            <div class="rank-skill skill-4">80%</div>
+                            <div class="progress-value item4"></div>
+                       </div>                     
+                    </div>
+                        
+                    <div class="progress-item">
+                        <h4>UX/UI design</h4>
+                        <div class="inner-skill">
+                            <div class="rank-skill skill-5">90%</div>
+                            <div class="progress-value item5"></div>
+                        </div>
+                    </div>
+                </div>
+          
+            </div>
+          </div>
+          <!-- portfolio -->
+          <div class="cl8">
+            <div class="portfolio-wrap wedo-section" id="portfolio">
+              <div class="wrap-title">
+                <div class="note">
+                  <span class="icon-icon-7 icon"></span>
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>Our Portfolio</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    Our Portfolio<span>.</span>
+                  </h1>
+                  <img class="logo" src="images/logo-2.png" alt="image">
+                </div>
+                
+                <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae
+                   enim viverra mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis.</p>
+              </div>
+              <div class="group-col-2 content">
+                <div class="cl2">
+                  <div class="box-portfolio">
+                    <div class="img-portfolio">
+                      <img src="images/portfolio/img-1.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                      <p>Figma Design</p>
+                      <h4><a href="./portfolio-details-01.html">magazine front design 
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.922649 17.1544L18.5417 2.37029M18.5417 2.37029L17.628 11.3936M18.5417 2.37029L9.49675 1.70317" stroke="#1D1C22" stroke-opacity="0.1" stroke-width="2"/>
+                          </svg>
+                        </a></h4>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- box 2 -->
+                <div class="cl2">
+                  <div class="box-portfolio">
+                    <div class="img-portfolio">
+                      <img src="images/portfolio/img-2.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                      <p>XD Design</p>
+                      <h4><a href="./portfolio-details-01.html">Mineral Water Delivery XD Template
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.922649 17.1544L18.5417 2.37029M18.5417 2.37029L17.628 11.3936M18.5417 2.37029L9.49675 1.70317" stroke="#1D1C22" stroke-opacity="0.1" stroke-width="2"/>
+                          </svg>
+                        </a></h4>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 3 -->
+                <div class="cl2">
+                  <div class="box-portfolio">
+                    <div class="img-portfolio">
+                      <img src="images/portfolio/img-3.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                      <p>PSD Design</p>
+                      <h4><a href="./portfolio-details-01.html">Health & Medical PSD Template
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.922649 17.1544L18.5417 2.37029M18.5417 2.37029L17.628 11.3936M18.5417 2.37029L9.49675 1.70317" stroke="#1D1C22" stroke-opacity="0.1" stroke-width="2"/>
+                          </svg>
+                        </a></h4>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 4 -->
+                <div class="cl2">
+                  <div class="box-portfolio">
+                    <div class="img-portfolio">
+                      <img src="images/portfolio/img-4.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                      <p>HTML Design</p>
+                      <h4><a href="./portfolio-details-01.html">NFT PortFolio Figma Template
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.922649 17.1544L18.5417 2.37029M18.5417 2.37029L17.628 11.3936M18.5417 2.37029L9.49675 1.70317" stroke="#1D1C22" stroke-opacity="0.1" stroke-width="2"/>
+                          </svg>
+                        </a></h4>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 5 -->
+                <div class="cl2">
+                  <div class="box-portfolio">
+                    <div class="img-portfolio">
+                      <img src="images/portfolio/img-5.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                      <p>WordPress</p>
+                      <h4><a href="./portfolio-details-01.html">Personal portfolio WP Theme
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.922649 17.1544L18.5417 2.37029M18.5417 2.37029L17.628 11.3936M18.5417 2.37029L9.49675 1.70317" stroke="#1D1C22" stroke-opacity="0.1" stroke-width="2"/>
+                          </svg>
+                        </a></h4>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 6 -->
+                <div class="cl2">
+                  <div class="box-portfolio">
+                    <div class="img-portfolio">
+                      <img src="images/portfolio/img-1.jpg" alt="image">
+                    </div>
+                    <div class="content">
+                      <p>PHP Design</p>
+                      <h4><a href="./portfolio-details-01.html">Real estate group
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M0.922649 17.1544L18.5417 2.37029M18.5417 2.37029L17.628 11.3936M18.5417 2.37029L9.49675 1.70317" stroke="#1D1C22" stroke-opacity="0.1" stroke-width="2"/>
+                          </svg>
+                        </a></h4>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- end -->
+                
+              </div>
+              <!-- widget link -->
+              <ul class="tf-pagination st1">
+                <li><a href="#"><i class="icon-arrow-thin-left"></i></a></li>
+                <li><a href="#">1</a></li>
+                <li class="current"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li class="current"><a href="#"><i class="icon-arrow-thin-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- end -->
+          <!-- blog -->
+          <div class="cl8">
+            <div class="contact-wrap wedo-section" id="blog">
+              <div class="wrap-title">
+                <div class="note">
+                  <span class="icon-icon-9 icon"></span>
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>Blogs & News</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    Latest News<span>.</span>
+                  </h1>
+                  <img class="logo" src="images/logo-2.png" alt="image">
+                </div>
+                
+                <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae
+                   enim viverra mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis.</p>
+              </div>
+              <div class="group-col-2 content">
+                <div class="cl2">
+                  <div class="box-latest">
+                    <div class="img-latest">
+                      <img src="images/blog/blog-1.jpg" alt="image">
+                    </div>
+                    <div class="inner-top">
+                      
+                        <h3><a href="./blog-deltails.html">
+                          Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks. Intei finibus.
+                        </a></h3>
+                        <a href="#" class="date-post">
+                          <span class="icon-calendar"></span>
+                          <span>03/ 01/ 2023</span>
+                        </a>
+                     
+                      
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-2.png" alt="image">
+                            <span>By-</span>
+                            <span>Wedo</span>
+                          </div>
+                          <ul class="view">
+                            <li><i class="icon-cmt"></i>&ensp; 23</li>
+                            <li><i class="icon-view"></i>&ensp; 503</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- box 2 -->
+                <div class="cl2">
+                  <div class="box-latest">
+                    <div class="img-latest">
+                      <img src="images/blog/blog-2.jpg" alt="image">
+                    </div>
+                    <div class="inner-top">
+                        <h3><a href="./blog-deltails.html">
+                          Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks. Intei finibus.
+                        </a></h3>
+                        <a href="#" class="date-post">
+                          <span class="icon-calendar"></span>
+                          <span>03/ 01/ 2023</span>
+                        </a>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-2.png" alt="image">
+                            <span>By-</span>
+                            <span>Wedo</span>
+                          </div>
+                          <ul class="view">
+                            <li><i class="icon-cmt"></i>&ensp; 23</li>
+                            <li><i class="icon-view"></i>&ensp; 503</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 3 -->
+                <div class="cl2">
+                  <div class="box-latest">
+                    <div class="img-latest">
+                      <img src="images/blog/blog-11.jpg" alt="image">
+                    </div>
+                    <div class="inner-top">
+                        <h3><a href="./blog-deltails.html">
+                          Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks. Intei finibus.
+                        </a></h3>
+                        <a href="#" class="date-post">
+                          <span class="icon-calendar"></span>
+                          <span>03/ 01/ 2023</span>
+                        </a>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-2.png" alt="image">
+                            <span>By-</span>
+                            <span>Wedo</span>
+                          </div>
+                          <ul class="view">
+                            <li><i class="icon-cmt"></i>&ensp; 23</li>
+                            <li><i class="icon-view"></i>&ensp; 503</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 4 -->
+                <div class="cl2">
+                  <div class="box-latest">
+                    <div class="img-latest">
+                      <img src="images/blog/blog-12.jpg" alt="image">
+                    </div>
+                    <div class="inner-top">
+                        <h3><a href="./blog-deltails.html">
+                          Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks. Intei finibus.
+                        </a></h3>
+                        <a href="#" class="date-post">
+                          <span class="icon-calendar"></span>
+                          <span>03/ 01/ 2023</span>
+                        </a> 
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-2.png" alt="image">
+                            <span>By-</span>
+                            <span>Wedo</span>
+                          </div>
+                          <ul class="view">
+                            <li><i class="icon-cmt"></i>&ensp; 23</li>
+                            <li><i class="icon-view"></i>&ensp; 503</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 5 -->
+                <div class="cl2">
+                  <div class="box-latest">
+                    <div class="img-latest">
+                      <img src="images/blog/blog-5.jpg" alt="image">
+                    </div>
+                    <div class="inner-top">
+                        <h3><a href="./blog-deltails.html">
+                          Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks. Intei finibus.
+                        </a></h3>
+                        <a href="#" class="date-post">
+                          <span class="icon-calendar"></span>
+                          <span>03/ 01/ 2023</span>
+                        </a>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-2.png" alt="image">
+                            <span>By-</span>
+                            <span>Wedo</span>
+                          </div>
+                          <ul class="view">
+                            <li><i class="icon-cmt"></i>&ensp; 23</li>
+                            <li><i class="icon-view"></i>&ensp; 503</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 6 -->
+                <div class="cl2">
+                  <div class="box-latest">
+                    <div class="img-latest">
+                      <img src="images/blog/blog-13.jpg" alt="image">
+                    </div>
+                    <div class="inner-top">
+                      
+                        <h3><a href="./blog-deltails.html">
+                          Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks. Intei finibus.
+                        </a></h3>
+                        <a href="#" class="date-post">
+                          <span class="icon-calendar"></span>
+                          <span>03/ 01/ 2023</span>
+                        </a>
+                     
+                      
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-2.png" alt="image">
+                            <span>By-</span>
+                            <span>Wedo</span>
+                          </div>
+                          <ul class="view">
+                            <li><i class="icon-cmt"></i>&ensp; 23</li>
+                            <li><i class="icon-view"></i>&ensp; 503</li>
+                          </ul>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+              </div>
+              <!-- widget link -->
+             
+                <ul class="tf-pagination">
+                  <li><a href="#"><i class="icon-arrow-thin-left"></i></a></li>
+                  <li><a href="#">1</a></li>
+                  <li class="current"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li class="current"><a href="#"><i class="icon-arrow-thin-right"></i></a></li>
+                </ul>
+              
+            </div>
+          </div>
+          <!-- end -->
+          <!-- testimonials -->
+          <div class="cl8">
+            <div class="testimonials-wrap wedo-section" id="testimonials">
+              <div class="wrap-title">
+                <div class="note">
+                  <span class="icon-icon-10 icon"></span>
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>What Client Says?</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    Testimonials<span>.</span>
+                  </h1>
+                  <img class="logo" src="images/logo-2.png" alt="image">
+                </div>
+                
+                <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae
+                   enim viverra mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis.</p>
+              </div>
+              <div class="group-col-2 content">
+                <div class="cl2">
+                  <div class="box-testimonials">
+                    <div class="inner-top">
+                      <p>Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks.
+                        Intei finibus, nissdl atloyoi tempus semper mkola, rokomoni been lectus auctor leo.</p>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-2.png" alt="image">
+                          </div>
+                          <ul class="group-rating">
+                            <h4><a href="#">L.Towkibu Pikus</a></h4>
+                            <ul class="list-star">
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li>(5 Reviews)</li>
+                            </ul>
+                          </ul>
+                          <span class="icon-mask-group"></span>
+
+                        </div>
+                        
+                      </div>
+                   
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- box 2 -->
+                <div class="cl2">
+                  <div class="box-testimonials active">
+                    <div class="inner-top">
+                      <p>Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks.
+                        Intei finibus, nissdl atloyoi tempus semper mkola, rokomoni been lectus auctor leo.</p>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-3.jpg" alt="image">
+                          </div>
+                          <ul class="group-rating">
+                            <h4><a href="#">L.Towkibu Pikus</a></h4>
+                            <ul class="list-star">
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li>(5 Reviews)</li>
+                            </ul>
+                          </ul>
+                          <span class="icon-mask-group"></span>
+
+                        </div>
+                        
+                      </div>
+                   
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 3 -->
+                <div class="cl2">
+                  <div class="box-testimonials">
+                    <div class="inner-top">
+                      <p>Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks.
+                        Intei finibus, nissdl atloyoi tempus semper mkola, rokomoni been lectus auctor leo.</p>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-4.jpg" alt="image">
+                          </div>
+                          <ul class="group-rating">
+                            <h4><a href="#">L.Towkibu Pikus</a></h4>
+                            <ul class="list-star">
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li>(5 Reviews)</li>
+                            </ul>
+                          </ul>
+                          <span class="icon-mask-group"></span>
+
+                        </div>
+                        
+                      </div>
+                   
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 4 -->
+                <div class="cl2">
+                  <div class="box-testimonials">
+                    <div class="inner-top">
+                      <p>Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks.
+                        Intei finibus, nissdl atloyoi tempus semper mkola, rokomoni been lectus auctor leo.</p>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-5.jpg" alt="image">
+                          </div>
+                          <ul class="group-rating">
+                            <h4><a href="#">L.Towkibu Pikus</a></h4>
+                            <ul class="list-star">
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li>(5 Reviews)</li>
+                            </ul>
+                          </ul>
+                          <span class="icon-mask-group"></span>
+
+                        </div>
+                        
+                      </div>
+                   
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 5 -->
+                <div class="cl2">
+                  <div class="box-testimonials">
+                    <div class="inner-top">
+                      <p>Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks.
+                        Intei finibus, nissdl atloyoi tempus semper mkola, rokomoni been lectus auctor leo.</p>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-6.jpg" alt="image">
+                          </div>
+                          <ul class="group-rating">
+                            <h4><a href="#">L.Towkibu Pikus</a></h4>
+                            <ul class="list-star">
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li>(5 Reviews)</li>
+                            </ul>
+                          </ul>
+                          <span class="icon-mask-group"></span>
+
+                        </div>
+                        
+                      </div>
+                   
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+                <!-- box 6 -->
+                <div class="cl2">
+                  <div class="box-testimonials">
+                    <div class="inner-top">
+                      <p>Nam ultricies sed leol eget vehic. Sediur varius nonito magnia quis matks.
+                        Intei finibus, nissdl atloyoi tempus semper mkola, rokomoni been lectus auctor leo.</p>
+                    </div>
+                    <div class="inner-bottom">
+                      <div class="post">
+                        <div class="user-post">
+                          <div class="thumb">
+                            <img src="images/avatar/avt-7.jpg" alt="image">
+                          </div>
+                          <ul class="group-rating">
+                            <h4><a href="#">L.Towkibu Pikus</a></h4>
+                            <ul class="list-star">
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li class="icon-star"></li>
+                              <li>(5 Reviews)</li>
+                            </ul>
+                          </ul>
+                          <span class="icon-mask-group"></span>
+
+                        </div>
+                        
+                      </div>
+                   
+                     
+                    </div>
+                  </div>
+                </div>
+                <!-- end -->
+              </div>
+              <!-- widget link -->
+             
+                <ul class="tf-pagination st1">
+                  <li><a href="#"><i class="icon-arrow-thin-left"></i></a></li>
+                  <li><a href="#">1</a></li>
+                  <li class="current"><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li class="current"><a href="#"><i class="icon-arrow-thin-right"></i></a></li>
+                </ul>
+              
+            </div>
+          </div>
+          <!-- end -->
+          <!-- contact -->
+          <div class="cl8">
+            <div class="contact-wrap wedo-section" id="contact">
+              <div class="wrap-title">
+                <div class="note">
+                  <span class="icon-note icon"></span>
+                  <span>Hi!</span>
+                  &ensp;
+                  <p>Contact Us</p>
+                </div>
+                <div class="box-title">
+                  <h1 class="title">
+                    Contact Us<span>.</span>
+                  </h1>
+                  <img class="logo" src="images/logo-2.png" alt="image">
+                </div>
+                
+                <p>Nullam dui dui, cursus at velit sit amet, condimentum aliquam nisi. Facilisis nibh vitae enim viverra
+                  mattis. Proin purus tortor, aliquet vel, ullamcorper consequat felis.</p>
+              </div>
+              <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.3210101890018!2d-97.73587714092555!3d30.28492176241068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b59b2584cfb7%3A0x8131ee4f174a21de!2sThe%20University%20of%20Texas%20at%20Austin!5e0!3m2!1sen!2s!4v1681981942966!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+              <div class="box-cart-contact">
+                <div class="tf-cart-contact">
+                  <div class="inner-left">
+                    <span><i class="icon-phone"></i> Contact Our Phone</span>
+                  </div>
+                  <h3>+55 (9900) 666 22</h3>
+                </div>
+                <div class="tf-cart-contact active">
+                  <div class="inner-left">
+                    <span><i class="icon-mail"></i>Contact Email</span>
+                  </div>
+                  <h3>info.mirpur@gmail.com</h3>
+                </div>
+                <div class="tf-cart-contact">
+                  <div class="inner-left">
+                    <span><i class="icon-location"></i>Contact Location</span>
+                  </div>
+                  <h3>14/4, Bonosri, USA.</h3>
+                </div>
+              </div>
+              <div class="wd-post-comment">
+                <div class="title-cmt">
+                  <h3>Send A Message</h3>
+                  <p>Nunc velit metus, volutpat elementum euismod eget, cursus nec nunc.</p>
+                </div>
+                <form method="post">
+                  <div class="group-input">
+                    <div class="input">
+                      <label>Your Name</label>
+                      <input type="text" placeholder="Enter Your Name">
+                    </div>
+                    <div class="input">
+                      <label>Your Mail</label>
+                      <input type="text" placeholder="infoflex@info.com">
+                    </div>
+                  </div>
+                  <div class="textarea">
+                    <label>Your Message</label>
+                    <textarea placeholder="Write Your Message"></textarea>
+                  </div>
+                  <p><span>*</span>&nbsp; Call us 24/7  or fill out the form below to receive a free and confidential initial consultation.</p>
+                  <button type="submit">
+                    Submit Now <span class="icon-arrow"></span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- end -->
+          <!-- blog - details -->
+          <div class="cl8">
+            <div class="blog-wrap wedo-section animated" id="blog-details">
               <div class="wrap-title">
                 <div class="note">
                   <span class="icon-icon-9 icon"></span>
@@ -242,25 +1580,26 @@
               </div>
             </div>
           </div>
+          <!-- end -->
         </div>
       </div>
     </div>
   </section>
-  <!-- End blog details -->
 
-  <!-- Footer -->
-  <footer>
+
+   <!-- Footer -->
+   <footer>
     <div class="tf-container">
       <div class="footer">
-        <img src="images/logo-footer.jpg" alt="images">
+        <p>Copyright <a href="#">wedo</a>©2023. All rights reserved.</p>
+        <img class="logo-footer" src="images/logo-footer-light.jpg" alt="images">
+        <img class="logo-footer-dark" src="images/logo-footer-dark.png" alt="images">
       </div>
     </div>
-    
   </footer>
-  <!-- End footer -->
+  <!-- End footer -->>
   <script src="javascript/jquery.min.js"></script>
   <script src="javascript/bootstrap.min.js"></script>
-  <script src="javascript/wow.min.js"></script>
   <script src="javascript/main.js"></script>
 
 </body>

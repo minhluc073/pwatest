@@ -540,7 +540,7 @@ input[type="color"],
 
 .header {
     position: relative;
-    padding: 25px 0px 14px;
+    padding: 20px 0px 0px;
 }
 
 .logo {
@@ -646,14 +646,26 @@ input[type="color"],
 
 /* footer */
 .footer {
-    margin: 31px 0px 14px;
+    margin: 20px 0px 0px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .footer img {
-    height: 88px;
+    width: 87.5px;
+    height: 70px;
+}
+
+.footer p {
+
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.footer p a {
+    color: var(--primary-bg-light);
 }
 
 /* popup menu */
@@ -983,3 +995,15 @@ input[type="color"],
 .flicker {
     animation: flicker 0.7s infinite;
 }
+
+/* ------------- */
+.tf-fullscreen {
+    overflow: hidden;
+}
+
+/* #footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 99;
+} */

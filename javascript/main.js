@@ -70,9 +70,9 @@
   var counter = function () {
     if ($(".wrap-counter").length > 0) {
       var a = 0;
-      $(window).scroll(function () {
+      $(".wedo-section").scroll(function () {
         var oTop = $(".wrap-counter").offset().top - window.innerHeight;
-        if (a == 0 && $(window).scrollTop() > oTop) {
+        if (a == 0 && $(".wedo-section").scrollTop() > oTop) {
           if ($().countTo) {
             $(".wrap-counter")
               .find(".counter-number")
@@ -137,8 +137,31 @@
       );
     }
   };
+  var progress_bar = function () {
+    const skills = {
+      item1: 90,
+      item2: 95,
+      item3: 93,
+      item4: 80,
+      item5: 90,
+    };
 
-  function page_transition() {
+    $.each(skills, function (key, value) {
+      var skillbar = $("." + key);
+
+      skillbar.animate(
+        {
+          width: value + "%",
+        },
+        3000,
+        function () {
+          $(".rank-skill").fadeIn();
+        }
+      );
+    });
+  };
+
+  var page_transition = function () {
     var section = jQuery(".wedo-section");
     var allLi = jQuery(".menu-content li");
     var button = jQuery(".menu-content a");
@@ -172,7 +195,20 @@
       }
       return false;
     });
-  }
+  };
+
+  var tf_fullscreen = function () {
+    //var tfheight = $(document).height();
+    var tfheight = jQuery(window).height();
+    // var headerheight = $('.header').height();
+    // var footerheight = $('.footer').height();
+
+    //var contentheight = tfheight -  ( headerheight + footerheight );
+    console.log(tfheight);
+
+    //$(".wrap-home").css({"height":contentheight});
+    $(".tf-fullscreen").css({ height: tfheight, oveflow: "hidden" });
+  };
 
   /* preload
   ------------------------------------------------------------------------------------- */
@@ -188,7 +224,9 @@
   $(function () {
     Modal_Right();
     counter();
+    progress_bar();
     page_transition();
+    tf_fullscreen();
     preload();
   });
 })(jQuery);
