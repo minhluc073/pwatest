@@ -162,36 +162,30 @@
   };
 
   var page_transition = function () {
-    var section = jQuery(".wedo-section");
-    var allLi = jQuery(".menu-content li");
-    var button = jQuery(".menu-content a");
-    var wrapper = jQuery(".wrapper");
+    var page = $(".wedo-section");
+    var all_element = $(".menu-content li");
+    var nav = $(".menu-content a, .wedo-link-item");
+    var wrapper = $(".wrapper");
     var enter = wrapper.data("enter");
     var exit = wrapper.data("exit");
-    button.on("click", function () {
-      var element = jQuery(this);
+    nav.on("click", function () {
+      var element = $(this);
       var href = element.attr("href");
-      // if (element.parent().hasClass("elisc_tm_button")) {
-      //   jQuery('.menu .menu-content a[href="' + href + '"]').trigger("click");
-      //   hashtag();
-      //   return false;
-      // }
-      var sectionID = jQuery(href);
+      var page_attribute = $(href);
       var parent = element.closest("li");
       if (!parent.hasClass("active")) {
-        allLi.removeClass("active");
-        wrapper.find(section).removeClass("animated " + enter);
-        if (wrapper.hasClass("opened")) {
-          wrapper.find(section).addClass("animated " + exit);
-        }
+        all_element.removeClass("active");
+        wrapper.find(page).removeClass("animated " + enter);
         parent.addClass("active");
-        //   wrapper.addClass("opened");
         wrapper
-          .find(sectionID)
+          .find(page_attribute)
           .removeClass("animated " + exit)
           .addClass("animated " + enter);
-        jQuery(section).addClass("hidden");
-        jQuery(sectionID).removeClass("hidden").addClass("active");
+        $(page).addClass("hidden");
+        $(page_attribute).removeClass("hidden").addClass("active");
+        $(page).animate({ scrollTop: 0 }, 1000);
+
+        // console.log ($('.wedo-section').scroll())
       }
       return false;
     });
