@@ -2,7 +2,7 @@
 --------------------------
 */
 @import url(../fonts/icons-font.css);
-
+@import url(./animation.css);
 
 
 
@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 999;
 }
 
 .sticky-sidebar .avatar {
@@ -1089,6 +1090,7 @@ form .textarea label {
 
 /* portfolio page */
 .box-portfolio {
+    position: relative;
     cursor: pointer;
     margin-bottom: 25px;
 }
@@ -1564,7 +1566,7 @@ table.content p {
 /* dark themes
 ----------------------------------------------------------- */
 .is-dark .sticky-sidebar {
-    background: rgba(255, 255, 255, 0.02);
+    background: #1E1E22;
 }
 
 .is-dark .wrap-title .note {
@@ -1827,4 +1829,22 @@ table.content p {
     left: 30px;
     font-size: 24px;
     line-height: 29px;
+}
+
+
+.wedo-link-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* display: inline-block; */
+}
+
+.box-latest .inner-top h3 a:not(.wedo-link-item),
+.box-latest .inner-top .date-post:not(.wedo-link-item),
+.box-portfolio .content h4 a:not(.wedo-link-item) {
+    position: relative;
+    z-index: 2;
+
 }

@@ -728,7 +728,7 @@ input[type="color"],
 
 .menu-popup .widget-filter {
     position: absolute;
-    inset: 85px 13px 0px;
+    inset: 70px 13px 0px;
     display: flex;
     justify-content: space-between;
     height: 789px;
@@ -982,28 +982,9 @@ input[type="color"],
     background: var(--color-white);
 }
 
-@keyframes flicker {
-    from {
-        color: var(--title-light)
-    }
 
-    to {
-        color: var(--primary-bg-light);
-    }
-}
-
-.flicker {
-    animation: flicker 0.7s infinite;
-}
 
 /* ------------- */
 .tf-fullscreen {
     overflow: hidden;
 }
-
-/* #footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    z-index: 99;
-} */
