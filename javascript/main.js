@@ -67,7 +67,7 @@
 
   /* counter
   ------------------------------------------------------------------------------------- */
-  var counter = function () {
+  const counter = function () {
     if ($(".wrap-counter").length > 0) {
       var a = 0;
       $(".wedo-section").scroll(function () {
@@ -104,7 +104,7 @@
           Counter: $(this).text(),
         },
         {
-          duration: 5000,
+          duration: 8000,
           step: function (func) {
             $(this).text(parseFloat(func).toFixed(size));
           },
@@ -114,7 +114,7 @@
 
   /* Modal_Right
   ------------------------------------------------------------------------------------- */
-  var Modal_Right = function () {
+  const Modal_Right = function () {
     const body = $("body");
     const modalNav = $(".menu-popup");
     if (modalNav.length) {
@@ -137,7 +137,7 @@
       );
     }
   };
-  var progress_bar = function () {
+  const progress_bar = function () {
     const skills = {
       item1: 90,
       item2: 95,
@@ -153,7 +153,7 @@
         {
           width: value + "%",
         },
-        3000,
+        5000,
         function () {
           $(".rank-skill").fadeIn();
         }
@@ -161,7 +161,7 @@
     });
   };
 
-  var page_transition = function () {
+  const page_transition = function () {
     var page = $(".wedo-section");
     var all_element = $(".menu-content li");
     var nav = $(".menu-content a, .wedo-link-item");
@@ -183,35 +183,38 @@
           .addClass("animated " + enter);
         $(page).addClass("hidden");
         $(page_attribute).removeClass("hidden").addClass("active");
-        $(page).animate({ scrollTop: 0 }, 1000);
-
-        // console.log ($('.wedo-section').scroll())
+        $(page).animate({ scrollTop: 0 }, 0);
       }
       return false;
     });
   };
 
-  var tf_fullscreen = function () {
-    //var tfheight = $(document).height();
+  const tf_fullscreen = function () {
     var tfheight = jQuery(window).height();
-    // var headerheight = $('.header').height();
-    // var footerheight = $('.footer').height();
-
-    //var contentheight = tfheight -  ( headerheight + footerheight );
-    console.log(tfheight);
-
-    //$(".wrap-home").css({"height":contentheight});
     $(".tf-fullscreen").css({ height: tfheight, oveflow: "hidden" });
   };
 
   /* preload
   ------------------------------------------------------------------------------------- */
-  var preload = function () {
-    $(".preload").fadeOut("slow", function () {
-      setTimeout(function () {
-        $(".preload").remove();
-      }, 1000);
-    });
+  const preloader = function () {
+    let preloaderWrapper = document.getElementById("preloader");
+    window.onload = () => {
+      let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
+        navigator.userAgent
+      )
+        ? true
+        : false;
+      if (!isMobile) {
+        setTimeout(function () {
+          preloaderWrapper.classList.add("preloaded");
+        }, 300);
+        setTimeout(function () {
+          preloaderWrapper.remove();
+        }, 1500);
+      } else {
+        preloaderWrapper.remove();
+      }
+    };
   };
 
   /* Dom Ready */
@@ -221,6 +224,6 @@
     progress_bar();
     page_transition();
     tf_fullscreen();
-    preload();
+    preloader();
   });
 })(jQuery);
