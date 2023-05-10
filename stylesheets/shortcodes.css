@@ -782,13 +782,23 @@ form .textarea label {
     position: absolute;
     width: 90px;
     height: 70px;
-    top: 25%;
+    top: 30%;
     left: 17%;
 }
 
-.box-title .circle-box svg {
+.box-title .circle-box .circle {
+    /* width: 120px;
+    height: 134px; */
+}
+
+.box-title .circle-box .circle {
     -webkit-animation: rotating 8s infinite linear;
     animation: rotating 8s infinite linear;
+}
+
+.box-title .circle-box .circle-1 {
+    -webkit-animation: rotating1 8s infinite linear;
+    animation: rotating1 8s infinite linear;
 }
 
 @keyframes rotating {
@@ -798,6 +808,16 @@ form .textarea label {
 
     100% {
         transform: rotate(0);
+    }
+}
+
+@keyframes rotating1 {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }
 

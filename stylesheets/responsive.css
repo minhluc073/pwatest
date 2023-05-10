@@ -177,6 +177,14 @@
         flex: unset;
         width: 100%;
     }
+
+    .tf-count.center {
+        text-align: center;
+    }
+
+    .tf-count.center .count h4 {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 425px) {
@@ -185,7 +193,7 @@
         align-items: flex-start;
     }
 
-    .tf-service .title {
+    .tf-count {
         margin-top: 80px;
     }
 }
