@@ -773,8 +773,8 @@ form .textarea label {
     text-align: center;
     position: relative;
     overflow: hidden;
-    height: 80px;
-    width: 130px;
+    height: 70px;
+    width: 124px;
     margin-bottom: 20px;
 }
 
@@ -782,7 +782,7 @@ form .textarea label {
     position: absolute;
     width: 90px;
     height: 70px;
-    top: 30%;
+    top: 25%;
     left: 17%;
 }
 
