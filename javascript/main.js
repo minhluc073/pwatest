@@ -41,8 +41,17 @@
   const type_text = function () {
     var typed = new Typed(".auto-type", {
       strings: ["UX/UI Designer", "Developer", "Freelancer"],
-      typeSpeed: 150,
-      backSpeed: 150,
+      typeSpeed: 70,
+      backSpeed: 70,
+      backDelay: 900,
+      loop: true,
+    });
+    var typed = new Typed(".type-2", {
+      strings: ["HIRE ME"],
+      typeSpeed: 100,
+      // backDelay: 900,
+      backSpeed: 100,
+
       loop: true,
     });
   };

@@ -613,6 +613,12 @@ input[type="color"],
     color: var(--primary-bg-light);
 }
 
+.inner-header-left h3 .typed-cursor {
+    color: transparent;
+    display: none;
+
+}
+
 .inner-header-left h3:first-child {
     margin-right: 40px;
 }

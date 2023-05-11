@@ -112,6 +112,7 @@
     font-weight: 500;
     font-size: 14px;
     line-height: 30px;
+
 }
 
 .sticky-sidebar .content p {
@@ -282,6 +283,14 @@
 
 .post .thumb {
     margin-right: 49px;
+}
+
+#blog-details .post .thumb,
+#blog .box-latest .thumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
 }
 
 .post .view li {
@@ -580,7 +589,6 @@ form .group-input {
 
 form .group-input .input {
     position: relative;
-    /* width: 100%; */
     width: calc(50% - 30px);
     margin-left: 30px;
 }
@@ -783,7 +791,7 @@ form .textarea label {
     width: 90px;
     height: 70px;
     top: 25%;
-    left: 17%;
+    left: 15%;
 }
 
 .box-title .circle-box .circle {
@@ -1294,7 +1302,6 @@ form .textarea label {
     -ms-transition: all 0.3s ease-out 0s;
     -o-transition: all 0.3s ease-out 0s;
     transition: all 0.3s ease-out 0s;
-    height: 370px;
     border: 1px solid var(--title-light);
 }
 
@@ -1566,40 +1573,44 @@ form .textarea label {
     margin-top: 12px;
 }
 
-table.content {
-    border-spacing: 0;
-    border-collapse: separate;
+.about-wrap .content {
+
     border-radius: 10px;
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
     border: 1px solid rgba(29, 28, 34, 0.1);
 }
 
-table.content td {
-    width: 50%;
+.about-wrap .content .inner-top,
+.about-wrap .content .inner-bottom {
+    display: flex;
+
+}
+
+.about-wrap .content .content-left,
+.about-wrap .content .content-right {
+    flex: 1;
+    padding: 30px;
     border-left: 1px solid rgba(29, 28, 34, 0.1);
     border-bottom: 1px solid rgba(29, 28, 34, 0.1);
 }
 
-table.content .br-left {
+.about-wrap .content .br-left {
     border-left: none;
 }
 
-table.content .br-bottom {
+.about-wrap .content .br-bottom {
     border-bottom: none;
 }
 
-.content td {
+.about-wrap .content td {
     padding: 30px;
 }
 
-table.content h4 {
+.about-wrap .content h4 {
     font-size: 18px;
     line-height: 33px;
 }
 
-table.content p {
+.about-wrap .content p {
     font-size: 18px;
     line-height: 40px;
 }
@@ -1658,6 +1669,7 @@ table.content p {
     background-image: url(../images/service/bg.jpg);
     padding: 30px 45px 22px;
     background-size: cover;
+    background-position: center center;
     display: flex;
     row-gap: 24px;
     flex-wrap: wrap;
@@ -1668,6 +1680,7 @@ table.content p {
 
 .banner-dark {
     background-image: url(../images/service/bg-dark.jpg);
+
 }
 
 #about .banner-dark {
@@ -2091,8 +2104,12 @@ table.content p {
     line-height: 29px;
 }
 
+.is-dark .home-box .inner-right .box-image .bottom h4 {
+    color: var(--color-dark);
+}
 
-.wedo-link-item {
+
+.wrap-link {
     position: absolute;
     top: 0;
     left: 0;
@@ -2101,9 +2118,9 @@ table.content p {
     /* display: inline-block; */
 }
 
-.box-latest .inner-top h3 a:not(.wedo-link-item),
-.box-latest .inner-top .date-post:not(.wedo-link-item),
-.box-portfolio .content h4 a:not(.wedo-link-item) {
+.box-latest .inner-top h3 a:not(.wrap-link),
+.box-latest .inner-top .date-post:not(.wrap-link),
+.box-portfolio .content h4 a:not(.wrap-link) {
     position: relative;
     z-index: 2;
 
