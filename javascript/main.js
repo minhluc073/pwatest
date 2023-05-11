@@ -241,17 +241,18 @@
     $(".tf-fullscreen").css({ height: tfheight, oveflow: "hidden" });
   };
 
-  $(".wedo-section").scroll(function () {
-    // gsap.to(".tf-service", {
-    //   duration: 2,
-    //   x: -80,
-    //   xPercent: 100,
-    //   attr: {
-    //     fill: "#8d3dae",
-    //     rx: 50,
-    //   },
-    // });
-  });
+  const scroll_animation = function () {
+    $(".wedo-section").scroll(function () {
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    });
+
+    if (window.innerWidth < 1190) {
+      $(".animate-down").attr("data-aos", "");
+    }
+  };
 
   /* preload
   ------------------------------------------------------------------------------------- */
@@ -276,7 +277,7 @@
     page_transition();
     tf_fullscreen();
     type_text();
-    // scroll_animations();
+    scroll_animation();
     preloader();
   });
 })(jQuery);
