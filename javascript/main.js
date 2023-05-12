@@ -1,43 +1,33 @@
 /*
- * Header Fixed
- * scrollEffect
- * show search
- * Categories slideToggle
- * accordion
- * parallax
- * goTop
+ * Choose themes
+ * Type text
+ * Header fixed
+ * Counter
+ * Modal down
+ * Number
+ * Progress bar
  * counter
- * filter
- * popUpLightBox
- * gallery
- * flatProgressBar
- * load more
- * load more2
- * fasterPreview
- * UpImg
- * delete_img
- * tfTabs
- * btn nav menu
- * btnCategory
- * dropOptionForm
- * progressProduct
- * Modal_Right
- * rangeSlider
- * btnQuantity
- * stickSidebar
+ * Page transition
+ * Fullscreen
+ * Scroll animation
  * preload
  */
 
 (function ($) {
   "use strict";
 
-  $(".choose-themes").on("click", function (e) {
-    e.preventDefault();
-    $("body").toggleClass("is-dark");
-    $(".sun").toggleClass("moon");
-    $(".choose-themes").toggleClass("day");
-  });
-
+  /* Choose themes
+  ------------------------------------------------------------------------------------- */
+  const choose_themes = function () {
+    $(".choose-themes").on("click", function (e) {
+      e.preventDefault();
+      $("body").toggleClass("is-dark");
+      $(".sun").toggleClass("moon");
+      $(".choose-themes").toggleClass("day");
+    });
+  };
+  /* Type text
+  ------------------------------------------------------------------------------------- */
   const type_text = function () {
     var typed = new Typed(".auto-type", {
       strings: ["UX/UI Designer", "Developer", "Freelancer"],
@@ -55,7 +45,9 @@
       loop: true,
     });
   };
-  var headerFixed = function () {
+  /* Header fixed
+  ------------------------------------------------------------------------------------- */
+  const header_fixed = function () {
     if ($("header").hasClass("header-fixed")) {
       var nav = $("#header");
 
@@ -91,7 +83,7 @@
       }
     }
   };
-  /* counter
+  /* Counter
   ------------------------------------------------------------------------------------- */
   const counter = function () {
     if ($(".wrap-counter").length > 0) {
@@ -118,53 +110,18 @@
       });
     }
   };
-
-  $(".number").each(function () {
-    var size = $(this).text().split(".")[1]
-      ? $(this).text().split(".")[1].length
-      : 0;
-    $(this)
-      .prop("Counter", 0)
-      .animate(
-        {
-          Counter: $(this).text(),
-        },
-        {
-          duration: 8000,
-          step: function (func) {
-            $(this).text(parseFloat(func).toFixed(size));
-          },
-        }
-      );
-  });
-
-  /* Modal_Right
+  /* Modal down 
   ------------------------------------------------------------------------------------- */
-  const Modal_Right = function () {
+  const modal_down = function () {
     const body = $("body");
     const modalNav = $(".menu-popup");
     if (modalNav.length) {
-      // const open = function () {
-      //   modalNav.addClass("modal-menu--open");
-      // };
       const close = function () {
         modalNav.removeClass("modal-menu--open");
       };
 
       $("#nav-filter").on("click", function () {
         modalNav.toggleClass("modal-menu--open");
-
-        if (window.innerWidth > 1550) {
-          gsap.from(".filter-menu li", {
-            duration: 0.5,
-            opacity: 0,
-            y: -100,
-            stagger: 0.08,
-            ease: "back.in",
-          });
-        }
-
-        // open();
       });
       $(".modal-menu__backdrop,.title-button-group, .menu-content li a").on(
         "click",
@@ -174,7 +131,30 @@
       );
     }
   };
-
+  /* Number
+  ------------------------------------------------------------------------------------- */
+  const number = function () {
+    $(".number").each(function () {
+      var size = $(this).text().split(".")[1]
+        ? $(this).text().split(".")[1].length
+        : 0;
+      $(this)
+        .prop("Counter", 0)
+        .animate(
+          {
+            Counter: $(this).text(),
+          },
+          {
+            duration: 8000,
+            step: function (func) {
+              $(this).text(parseFloat(func).toFixed(size));
+            },
+          }
+        );
+    });
+  };
+  /* Progress bar
+  ------------------------------------------------------------------------------------- */
   const progress_bar = function () {
     const skills = {
       item1: 90,
@@ -198,7 +178,8 @@
       );
     });
   };
-
+  /* Page transition
+  ------------------------------------------------------------------------------------- */
   const page_transition = function () {
     var page = $(".wedo-section");
     var all_element = $(".menu-content li");
@@ -235,12 +216,14 @@
       return false;
     });
   };
-
+  /* Fullscreen
+  ------------------------------------------------------------------------------------- */
   const tf_fullscreen = function () {
     var tfheight = jQuery(window).height();
     $(".tf-fullscreen").css({ height: tfheight, oveflow: "hidden" });
   };
-
+  /* Scroll animation
+  ------------------------------------------------------------------------------------- */
   const scroll_animation = function () {
     $(".wedo-section").scroll(function () {
       AOS.init({
@@ -253,8 +236,7 @@
       $(".animate-down").attr("data-aos", "");
     }
   };
-
-  /* preload
+  /* Preload
   ------------------------------------------------------------------------------------- */
   const preloader = function () {
     let preloaderWrapper = document.getElementById("preloader");
@@ -270,10 +252,12 @@
 
   /* Dom Ready */
   $(function () {
-    headerFixed();
-    Modal_Right();
+    choose_themes();
+    header_fixed();
+    modal_down();
     counter();
     progress_bar();
+    number();
     page_transition();
     tf_fullscreen();
     type_text();
