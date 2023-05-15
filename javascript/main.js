@@ -155,29 +155,76 @@
   };
   /* Progress bar
   ------------------------------------------------------------------------------------- */
-  const progress_bar = function () {
-    const skills = {
-      item1: 90,
-      item2: 95,
-      item3: 93,
-      item4: 80,
-      item5: 90,
-    };
+  // const progress_bar = function () {
+  //   const skills = {
+  //     item1: 90,
+  //     item2: 95,
+  //     item3: 93,
+  //     item4: 80,
+  //     item5: 90,
+  //   };
 
-    $.each(skills, function (key, value) {
-      var skillbar = $("." + key);
+  //   $.each(skills, function (key, value) {
+  //     var skillbar = $("." + key);
 
-      skillbar.animate(
-        {
-          width: value + "%",
-        },
-        5000,
-        function () {
-          $(".rank-skill").fadeIn();
-        }
-      );
+  //     skillbar.animate(
+  //       {
+  //         width: value + "%",
+  //       },
+  //       5000,
+  //       function () {
+  //         $(".rank-skill").fadeIn();
+  //       }
+  //     );
+  //   });
+  // };
+
+  var inViewport = function () {
+    $('[data-inviewport="yes"]').waypoint(
+      function () {
+        $(this).trigger("on-appear");
+      },
+      { offset: "90%", triggerOnce: true }
+    );
+
+    $(window).on("load", function () {
+      setTimeout(function () {
+        $.waypoints("refresh");
+      }, 100);
     });
   };
+  var flatProgressBar = function () {
+    if ($().waypoint) {
+      $(".progress-bg").on("on-appear", function () {
+        $(this).each(function () {
+          var percent = parseInt($(this).data("percent"));
+
+          $(this)
+            .find(".progress-animate")
+            .animate(
+              {
+                width: percent + "%",
+              },
+              1000,
+              "easeInCirc"
+            );
+
+          $(this)
+            .parent(".themesflat-progress")
+            .find(".perc")
+            .addClass("show")
+            .animate(
+              {
+                width: percent + "%",
+              },
+              1000,
+              "easeInCirc"
+            );
+        });
+      });
+    }
+  };
+
   /* Page transition
   ------------------------------------------------------------------------------------- */
   const page_transition = function () {
@@ -205,12 +252,13 @@
         $(page).animate({ scrollTop: 0 }, 0);
 
         if (window.innerWidth < 1190) {
-          window.scrollTo({
-            top: 620,
-            left: 0,
-            behavior: "smooth",
-          });
-          $(page).removeClass(enter);
+          // $(wrapper).scrollTo({
+          //   top: 0,
+          //   left: 0,
+          //   behavior: "smooth",
+          // });
+          $(wrapper).animate({ scrollTop: 0 }, 0);
+          // $(page).removeClass(enter);
         }
       }
       return false;
@@ -236,18 +284,72 @@
       $(".animate-down").attr("data-aos", "");
     }
   };
+  /* cursor
+  -------------------------------------------------------------------------*/
+  const cursor = function () {
+    var myCursor = jQuery(".tf-mouse");
+    if (myCursor.length) {
+      if ($("body")) {
+        const e = document.querySelector(".tf-mouse-inner"),
+          t = document.querySelector(".tf-mouse-outer");
+        let n,
+          i = 0,
+          o = !1;
+        (window.onmousemove = function (s) {
+          o ||
+            (t.style.transform =
+              "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+            (e.style.transform =
+              "translate(" + s.clientX + "px, " + s.clientY + "px)"),
+            (n = s.clientY),
+            (i = s.clientX);
+        }),
+          $("body").on(
+            "mouseenter",
+            "a, .nav-menu, .choose-themes",
+            function () {
+              e.classList.add("mouse-hover"), t.classList.add("mouse-hover");
+            }
+          ),
+          $("body").on(
+            "mouseleave",
+            "a, .nav-menu, .choose-themes",
+            function () {
+              ($(this).is("a") && $(this).closest(".nav-menu").length) ||
+                (e.classList.remove("mouse-hover"),
+                t.classList.remove("mouse-hover"));
+            }
+          ),
+          (e.style.visibility = "visible"),
+          (t.style.visibility = "visible");
+      }
+    }
+  };
+
   /* Preload
   ------------------------------------------------------------------------------------- */
   const preloader = function () {
-    let preloaderWrapper = document.getElementById("preloader");
-    window.onload = () => {
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
+      navigator.userAgent
+    )
+      ? true
+      : false;
+    var preloader = $("#preloader");
+    if (!isMobile) {
       setTimeout(function () {
-        preloaderWrapper.classList.add("preloaded");
+        preloader.addClass("preloaded");
       }, 100);
       setTimeout(function () {
-        preloaderWrapper.remove();
-      }, 1100);
-    };
+        preloader.remove();
+      }, 900);
+    } else {
+      preloader.remove();
+    }
+  };
+  const wedo_onload = function () {
+    setTimeout(function () {
+      preloader();
+    }, 500);
   };
 
   /* Dom Ready */
@@ -256,12 +358,20 @@
     header_fixed();
     modal_down();
     counter();
-    progress_bar();
+    // progress_bar();
+    flatProgressBar();
     number();
     page_transition();
     tf_fullscreen();
     type_text();
-    scroll_animation();
-    preloader();
+    // scroll_animation();
+    cursor();
+
+    wedo_onload();
+    $(window).load(function () {
+      //   flatOwl();
+      //   Parallax();
+      inViewport();
+    });
   });
 })(jQuery);
