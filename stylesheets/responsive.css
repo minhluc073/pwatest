@@ -11,10 +11,10 @@
     .footer {
         margin-top: 20px;
     } */
-    .wrapper {
+    /* .wrapper {
         height: 80vh;
 
-    }
+    } */
 
 
 }
@@ -22,14 +22,35 @@
 @media only screen and (max-width: 1190px) {
 
     .wrapper {
-        height: 70vh;
         overflow-y: scroll;
-        margin-bottom: 8px;
+        scrollbar-width: thin;
+        scrollbar-color: #fff
+    }
+
+    /* margin-bottom: 8px; */
+
+
+    .wrapper::-webkit-scrollbar {
+        width: 5px
+    }
+
+
+
+    .wrapper:-webkit-scrollbar-track {
+        background: #fff
     }
 
     .wrapper::-webkit-scrollbar-thumb {
         background-color: transparent;
+    }
 
+    .header {
+        box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.03);
+
+    }
+
+    .is-dark .header {
+        box-shadow: 0px 3px 9px rgba(255, 255, 255, 0.03)
     }
 
     .wedo-section {
@@ -71,13 +92,30 @@
         right: -4%;
     }
 
+    .menu-popup .main-menu .menu-content li:first-child {
+        display: none;
+    }
+
+    .menu-popup .main-menu p .trick {
+        display: block;
+    }
+
 }
 
 
-
-@media only screen and (max-width: 848px) {
+@media only screen and (max-width: 991px) {
     .home-box .content {
         /* justify-content: unset; */
+    }
+
+    .wrapper {
+        border: none;
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    .sticky-sidebar {
+        max-width: 100%;
     }
 
     .home-box .inner-right .box-image {
@@ -96,6 +134,8 @@
 }
 
 @media only screen and (max-width: 768px) {
+
+
     .about-wrap {
         margin-bottom: 80px;
     }
@@ -150,14 +190,6 @@
         flex-direction: column;
     }
 
-    .wrapper {
-        padding: 30px;
-    }
-
-    .sticky-sidebar {
-        max-width: 100%;
-    }
-
     .box-testimonials::after {
         width: 10%;
         height: 48%;
@@ -197,12 +229,6 @@
         left: unset;
         right: 4%;
         top: 17%;
-    }
-
-    .wrapper {
-        border: none;
-        padding: 0;
-        border-radius: 0px;
     }
 
     .menu-popup .widget-filter {

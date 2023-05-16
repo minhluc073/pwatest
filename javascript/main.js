@@ -88,9 +88,9 @@
   const counter = function () {
     if ($(".wrap-counter").length > 0) {
       var a = 0;
-      $(".wedo-section").scroll(function () {
+      $(".wedo-section, .wrapper").scroll(function () {
         var oTop = $(".wrap-counter").offset().top - window.innerHeight;
-        if (a == 0 && $(".wedo-section").scrollTop() > oTop) {
+        if (a == 0 && $(".wedo-section, .wrapper").scrollTop() > oTop) {
           if ($().countTo) {
             $(".wrap-counter")
               .find(".counter-number")
@@ -155,75 +155,74 @@
   };
   /* Progress bar
   ------------------------------------------------------------------------------------- */
-  // const progress_bar = function () {
-  //   const skills = {
-  //     item1: 90,
-  //     item2: 95,
-  //     item3: 93,
-  //     item4: 80,
-  //     item5: 90,
-  //   };
+  const progress_bar = function () {
+    const skills = {
+      item1: 90,
+      item2: 95,
+      item3: 93,
+      item4: 80,
+      item5: 90,
+    };
+    $(".wedo-section, .wrapper").scroll(function () {
+      $.each(skills, function (key, value) {
+        var skillbar = $("." + key);
 
-  //   $.each(skills, function (key, value) {
-  //     var skillbar = $("." + key);
-
-  //     skillbar.animate(
-  //       {
-  //         width: value + "%",
-  //       },
-  //       5000,
-  //       function () {
-  //         $(".rank-skill").fadeIn();
-  //       }
-  //     );
-  //   });
-  // };
-
-  var inViewport = function () {
-    $('[data-inviewport="yes"]').waypoint(
-      function () {
-        $(this).trigger("on-appear");
-      },
-      { offset: "90%", triggerOnce: true }
-    );
-
-    $(window).on("load", function () {
-      setTimeout(function () {
-        $.waypoints("refresh");
-      }, 100);
+        skillbar.animate(
+          {
+            width: value + "%",
+          },
+          5000,
+          function () {
+            $(".rank-skill").fadeIn();
+          }
+        );
+      });
     });
   };
-  var flatProgressBar = function () {
-    if ($().waypoint) {
-      $(".progress-bg").on("on-appear", function () {
-        $(this).each(function () {
-          var percent = parseInt($(this).data("percent"));
 
-          $(this)
-            .find(".progress-animate")
-            .animate(
-              {
-                width: percent + "%",
-              },
-              1000,
-              "easeInCirc"
-            );
+  // var inViewport = function () {
+  //   $('[data-inviewport="yes"]').waypoint(
+  //     function () {
+  //       $(this).trigger("on-appear");
+  //     },
+  //     { offset: "90%", triggerOnce: true }
+  //   );
 
-          $(this)
-            .parent(".themesflat-progress")
-            .find(".perc")
-            .addClass("show")
-            .animate(
-              {
-                width: percent + "%",
-              },
-              1000,
-              "easeInCirc"
-            );
-        });
-      });
-    }
-  };
+  //   $(window).on("load", function () {
+  //     setTimeout(function () {
+  //       $.waypoints("refresh");
+  //     }, 100);
+  //   });
+  // };
+  // var flatProgressBar = function () {
+  //   if ($(".chart-box").length > 0) {
+  //     $(".chart-box").appear(
+  //       function () {
+  //         var bar = $(this).find(".chart").data("barcolor"),
+  //           track = $(this).find(".chart").data("trackcolor"),
+  //           size = $(this).find(".chart").data("size"),
+  //           withh = $(this).find(".chart").data("width"),
+  //           text = $(this).find(".chart").data("text");
+  //         $(this).find(".chart .text").append(text);
+  //         $(".chart").easyPieChart({
+  //           easing: "easeOut",
+  //           lineWidth: withh,
+  //           size: size,
+  //           scaleColor: false,
+  //           barColor: bar,
+  //           trackColor: track,
+  //           animate: 5000,
+  //           onStep: function (from, to, percent) {
+  //             $(this.el).find(".percent").text(Math.round(percent));
+  //           },
+  //         });
+  //       },
+  //       {
+  //         offset: 400,
+  //       }
+  //     );
+  //   }
+  // };
 
   /* Page transition
   ------------------------------------------------------------------------------------- */
@@ -251,13 +250,17 @@
         $(page_attribute).removeClass("hidden").addClass("active");
         $(page).animate({ scrollTop: 0 }, 0);
 
-        if (window.innerWidth < 1190) {
+        if (window.innerWidth <= 1190) {
           // $(wrapper).scrollTo({
           //   top: 0,
           //   left: 0,
           //   behavior: "smooth",
           // });
-          $(wrapper).animate({ scrollTop: 0 }, 0);
+          // if ($("home").hasClass("home-box")) {
+          //   $(wrapper).animate({ scrollTop: 0 }, 0);
+          // }
+          $(wrapper).animate({ scrollTop: 680 }, 0);
+
           // $(page).removeClass(enter);
         }
       }
@@ -268,7 +271,11 @@
   ------------------------------------------------------------------------------------- */
   const tf_fullscreen = function () {
     var tfheight = jQuery(window).height();
+    var header_height = $(".header").height();
+    var footer_height = $(".footer").height() + 40;
+    var content_height = tfheight - (header_height + footer_height) + "px";
     $(".tf-fullscreen").css({ height: tfheight, oveflow: "hidden" });
+    $(".wrapper").css({ height: content_height });
   };
   /* Scroll animation
   ------------------------------------------------------------------------------------- */
@@ -338,10 +345,10 @@
     if (!isMobile) {
       setTimeout(function () {
         preloader.addClass("preloaded");
-      }, 100);
+      }, 200);
       setTimeout(function () {
         preloader.remove();
-      }, 900);
+      }, 1000);
     } else {
       preloader.remove();
     }
@@ -358,20 +365,14 @@
     header_fixed();
     modal_down();
     counter();
-    // progress_bar();
-    flatProgressBar();
+    progress_bar();
+    // flatProgressBar();
     number();
     page_transition();
     tf_fullscreen();
     type_text();
     // scroll_animation();
     cursor();
-
     wedo_onload();
-    $(window).load(function () {
-      //   flatOwl();
-      //   Parallax();
-      inViewport();
-    });
   });
 })(jQuery);

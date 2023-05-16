@@ -45,6 +45,8 @@
     margin-top: 8px;
 }
 
+
+
 .group-4-8 {
     display: flex;
     flex-wrap: wrap;
@@ -1601,7 +1603,7 @@ form .textarea label {
 }
 
 .about-wrap .content {
-
+    margin-top: -5px;
     border-radius: 10px;
     border: 1px solid rgba(29, 28, 34, 0.1);
 }
@@ -1820,6 +1822,19 @@ form .textarea label {
     -webkit-transition: visibility1s linear, opacity 0s linear;
     -o-transition: visibility 1s linear, opacity 0s linear
 }
+
+/* .wrapper .group-4-8:after {
+    content: "";
+    position: absolute;
+    bottom: 1%;
+    width: 100%;
+    right: 81%;
+    left: -3%;
+    margin: -2px;
+    position: fixed;
+    padding: 30px 0;
+    background-image: linear-gradient(to bottom, transparent, black);
+} */
 
 .wedo-section.animated {
     opacity: 1;
@@ -2221,4 +2236,19 @@ form .textarea label {
 
 .themesflat-progress.style-1 .progress-animate {
     background-color: #ffc30c;
+}
+
+.menu-popup .main-menu p .trick {
+    font: 30px/30px 'Bebas Neue', cursive;
+    font-size: 32px;
+    line-height: 68px;
+    color: var(--title-light);
+    display: none;
+
+}
+
+.menu-popup .main-menu p .trick:hover {
+    color: var(--title-light);
+
+
 }
