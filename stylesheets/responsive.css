@@ -4,13 +4,7 @@
         overflow: unset;
     }
 
-    .footer {
-        position: unset;
-    }
 
-    .footer {
-        margin-top: 20px;
-    } */
     /* .wrapper {
         height: 80vh;
 
@@ -106,6 +100,17 @@
 @media only screen and (max-width: 991px) {
     .home-box .content {
         /* justify-content: unset; */
+    }
+
+    .menu-popup .widget-filter {
+        height: 70vh;
+        overflow-y: scroll;
+    }
+
+    .footer {
+        position: unset;
+        margin-top: 20px;
+
     }
 
     .wrapper {
